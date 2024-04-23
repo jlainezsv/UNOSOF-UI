@@ -1,0 +1,246 @@
+.layout-1 {
+    padding: 50px 10px 10px !important;
+    .funcleft {
+        display: flex;
+        //width: 45%;
+        padding: 0px 10px 10px;
+        .boxfunc-boxes {
+            width: 23%;
+        }
+        .boxfunc-location {
+            width: 40%;
+            // .select2-container{ width: 140px;}
+        }
+        .boxfunc-type {
+            width: 37%;
+        }
+    }
+    .funcright {
+        display: flex;
+        width: 45%;
+        padding: 0px 10px 10px;
+        .boxfunc-calctype {
+            width: 45%;
+        }
+        .boxfunc-avgstem {
+            width: 30%;
+        }
+        .boxfunc-boxprice {
+            width: 25%;
+        }
+    }
+    .bottomfunctions {
+        .funcleft {
+            width: 55%;
+            padding: 0px;
+            height: 70px;
+            .textareacont {
+                display: flex;
+                width: 100%;
+                gap: 10px;
+            }
+        }
+        .funcright {
+            height: 70px;
+        }
+    }
+    .select2-container {
+        width: 100% !important;
+    }
+    .panel-invent {
+        position: absolute;
+        width: calc(70% - 10px);
+        height: calc(55% - 35px);
+        transition: height 0.2s;
+        .table-body {
+            height: calc(100% - 33px);
+        }
+    }
+    .panel-box {
+        position: absolute;
+        bottom: 10px;
+        margin-bottom: 0;
+        width: calc(70% - 10px);
+        height: calc(45% - 35px);
+        transition: height 0.2s;
+    }
+    .panel-packages {
+        position: absolute;
+        right: 10px;
+        height: calc(100vh - 60px);
+        width: calc(30% - 20px);
+        transition: width 0.2s, background-color 0.2s;
+        .expandcollapse {
+            display: none;
+        }
+        .packages-container {
+            background-color: var(--lightgray);
+            height: calc(70% - 0px);
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding: 10px;
+            @include scrollbar-y;
+        }
+    }
+    .this-expand {
+        position: absolute;
+        width: calc(70% - 10px);
+        height: calc(90% - 47px);
+        transition: height 0.2s;
+    }
+    .this-collapse {
+        position: absolute;
+        width: calc(70% - 10px);
+        //height: calc(10% - 35px);
+        height: 47px;
+        transition: height 0.2s;
+        #invent-filters {
+            display: none;
+        }
+    }
+    .full-panel-packages {
+        background-color: rgba(20, 34, 46, 0.9);
+        position: absolute;
+        right: 10px;
+        height: calc(100vh - 60px);
+        width: calc(100% - 10px);
+        transition: width 0.2s, background-color 0.2s;
+        .top-actions {
+            display: none;
+        }
+        .packages-container {
+            width: 50%;
+            height: 100%;
+        }
+        .po-summary {
+            width: 50%;
+            .top-actions {
+                display: inherit;
+            }
+        }
+        #nav-tab-packages {
+            flex-direction: row;
+            padding-top: 40px;
+        }
+    }
+    .tab-pane {
+        overflow-y: auto;
+    }
+    .po-summary .top-actions {
+        display: none;
+    }
+    /////////// Nav Pricing ///////////
+    #nav-pricing {
+        .box-tablecontainer {
+            height: calc(100% - 110px);
+        }
+        .bottom-actions {
+            //padding: 5px 10px;
+        }
+        .topsection {
+            width: 70%;
+        }
+        .links {
+            a {
+                font-size: 12px;
+                margin-right: 10px;
+            }
+        }
+    }
+    /////////// Nav UPC ///////////
+    #nav-upc {
+        .topsection {
+            width: 70%;
+        }
+    }
+    /////////// Nav extras ///////////
+    #nav-extras {
+        .box-tablecontainer {
+            height: calc(100% - 110px);
+        }
+        .topsection {
+            width: 70%;
+            padding: 0 10px 10px;
+            .buttons {
+                display: flex;
+                align-self: flex-end;
+            }
+        }
+        .table-extra-head {
+            width: 100%;
+            margin: 0 auto;
+            td {
+                white-space: break-spaces;
+                text-overflow: inherit;
+            }
+        }
+        .table-extra-body {
+            width: 100%;
+            margin: 0 auto;
+            height: calc(100% - 24px);
+            td {
+                .inputintable {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+    /////////// Nav recipes ///////////
+    #nav-recipes {
+        .box-tablecontainer {
+            height: calc(100% - 110px);
+        }
+        .table-recipes-head {
+            width: 100%;
+            margin: 0 auto;
+            td {
+                white-space: break-spaces;
+                text-overflow: inherit;
+            }
+        }
+        .table-recipes-body {
+            width: 100%;
+            margin: 0 auto;
+            height: calc(100% - 24px);
+            td {
+                .inputintable {
+                    width: 100% !important;
+                }
+            }
+        }
+        .links {
+            a {
+                font-size: 12px;
+                margin: 0 10px;
+            }
+        }
+    }
+    /////////// Nav fees ///////////
+    #nav-fees {
+        .topsection {
+            width: 80%;
+            padding: 0 10px;
+        }
+        .box-tablecontainer {
+            height: calc(100% - 110px);
+        }
+        .table-fees-head {
+            width: 100%;
+            margin: 0 auto;
+            td {
+                white-space: break-spaces;
+                text-overflow: inherit;
+            }
+        }
+        .table-fees-body {
+            width: 100%;
+            margin: 0 auto;
+            height: calc(100% - 24px);
+            td {
+                .inputintable {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

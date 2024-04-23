@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Manage Customers</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/select2.min.css" rel="stylesheet" />
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/customers.css">
+    <link rel="stylesheet" href="css/postyle.css">
+    <style>
+        html,
+        body {
+            overflow: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.CustomersView').select2();
+
+            $('.mySelect').select2();
+        });
+    </script>
+</head>
+
+<body class="po">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div id="po-topbar" class="d-flex justify-content-between">
+
+
+
+        <!-- client info -->
+        <img src="/images/poimages/unosof-logo.svg" alt="" class="logo">
+        <div class="tb-client-info d-flex">
+            <!-- logo unosof -->
+
+
+            <div class="tb-labels">
+                <div class="label">ELITE ORDER:</div>
+                <div class="fill-label">900132945</div>
+            </div>
+            <div class="tb-labels noMobile">
+                <div class="label">Customer:</div>
+                <div class="fill-label">3D FLOWERS KZ</div>
+            </div>
+            <div class="tb-labels show-min-1260">
+                <div class="label">Shipping Customer:</div>
+                <div class="fill-label">3D FLOWERS KZ</div>
+            </div>
+            <div class="tb-labels show-min-1260">
+                <div class="label">Shipping Address:</div>
+                <div class="fill-label">JOSE GOMEZ E13 22, QUITO, EQ</div>
+            </div>
+            <div class="tb-labels">
+                <div class="label">Currency:</div>
+                <div class="fill-label">USD</div>
+            </div>
+        </div>
+        <a href="#" class="tb-btn" data-bs-toggle="modal" data-bs-target="#modal-po-customer-info">PO Info</a>
+
+        <!-- layout btns -->
+        <div class="layouts d-flex show-max-xl">
+            <div class="label">Layout:</div>
+            <button class="btn-layout btn-layout-1 btn-layout-active"></button>
+            <button class="btn-layout btn-layout-2"></button>
+            <button class="btn-layout btn-layout-3"></button>
+        </div>
+        <div class="dropdown show-max-1350">
+            <a class="layout tb-btn" href="#" role="button" id="" data-bs-toggle="dropdown" aria-expanded="false">Layout</a>
+
+            <div class="dropdown-menu topbarmenu" aria-labelledby="topbarmenu">
+                <div class="d-flex justify-content-around">
+                    <button class="btn-layout btn-layout-1 btn-layout-active"></button>
+                    <button class="btn-layout btn-layout-2"></button>
+                    <button class="btn-layout btn-layout-3"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="tb-btns">
+            <a href="#" class="tb-btn show-max-xxl txt-white"><span class="tb-ticket"></span> Create Invoice</a>
+            <a href="#" class="tb-btn show-max-xxl txt-white"><span class="tb-ticket"></span> Send Invoice</a>
+            <a href="#" class="tb-btn show-max-xxl txt-white"><span class="tb-ticket"></span> Send Packing List</a>
+            <a href="#" class="tb-btn show-max-xxl txt-white"><span class="tb-save"></span> Save</a>
+        </div>
+
+
+        <!-- Hamburguer Menu top bar -->
+        <div class="dropdown">
+            <a class="hamburguer" href="#" role="button" id="" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+            <ul class="dropdown-menu topbarmenu" aria-labelledby="topbarmenu">
+                <li><a class="align-items-center" href="#"><span class="tb-home"></span> Home </a></li>
+                <li><a class="align-items-center" href="#"><span class="tb-new"></span>New</a></li>
+                <li><a class="align-items-center" href="#"><span class="tb-log"></span>Log</a></li>
+                <li><a class="align-items-center" href="#"><span class="tb-ref"></span>Refresh</a></li>
+
+                <!-- show in min-width 1800px -->
+                <li><a href="#" class="tb-btn show-max-1800"><span class="tb-ticket"></span> Create Invoice</a></li>
+                <li><a href="#" class="tb-btn show-max-1800"><span class="tb-ticket"></span> Send Invoice</a></li>
+                <li><a href="#" class="tb-btn show-max-1800"><span class="tb-ticket"></span> Send Packing List</a></li>
+                <li><a href="#" class="tb-btn show-max-1800"><span class="tb-save"></span> Save</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="navbar-default navbar-static-side" style="height: 100vh">
+        <a class="hamburguer simulatecollapse collapse-no" href="#" role="button" id="" style="margin:60px auto;"></a>
+
+    </div>
+
+
+    <div id="page-wrapper" class="layout-1">
+        <div class="panel panel-invent">
+            <div class="navcontainer">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-liveinventory-tab" data-bs-toggle="tab" data-bs-target="#nav-liveinventory" type="button" role="tab" aria-controls="nav-liveinventory" aria-selected="true">Live<span class="no-layout2"> Inventory</span></button>
+                        <button class="nav-link" id="nav-dispoboxlist-tab" data-bs-toggle="tab" data-bs-target="#nav-dispoboxlist" type="button" role="tab" aria-controls="nav-dispoboxlist" aria-selected="false">Dispo Box<span class="no-layout2"> List</span></button>
+                        <button class="nav-link" id="nav-boxlist-tab" data-bs-toggle="tab" data-bs-target="#nav-boxlist" type="button" role="tab" aria-controls="nav-boxlist" aria-selected="false">Mixed Box<span class="no-layout2"> List</span></button>
+                        <button class="nav-link" id="nav-productlist-tab" data-bs-toggle="tab" data-bs-target="#nav-productlist" type="button" role="tab" aria-controls="nav-productlist" aria-selected="false">Product<span class="no-layout2"> List</span></button>
+                        <button class="nav-link" id="nav-orderhistory-tab" data-bs-toggle="tab" data-bs-target="#nav-orderhistory" type="button" role="tab" aria-controls="nav-orderhistory" aria-selected="false"><span class="no-layout2">Order </span>History</button>
+                    </div>
+                </nav>
+                <div class="panel-controls">
+                    <!-- <a href="#invent-filters" class=""><span class="icon-filter"></span><span class="no-layout2">Filters</span></a> -->
+                    <a class="btn-control-filters" data-bs-toggle="collapse" href="#invent-filters" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="icon-filter"></span><span class="no-layout2">Filters</span>
+                    </a>
+                    <!-- <button type="button" class="expandcollapse invent-pan" data-bs-toggle="button" autocomplete="off"></button> -->
+                    <button type="button" class="expandcollapse invent-pan"></button>
+                </div>
+            </div>
+
+            <!-- minibox when panel is collapsed in layout 2 & 3 -->
+            <div class="minibox-container">
+                <div class="ico-invent"></div>
+            </div>
+
+            <div class="tab-content" id="nav-tab-inventory">
+                <div class="collapse" id="invent-filters">
+                    <div class="filcont gap-1">
+                        <div class="invfil-farm">
+                            <label for="inventfilter-farm">Farm</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-farm" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                <select name="inventfilter-farm" id="ivent-farm" class="form-control mySelect">
+                                        <option value="1">All Farms</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                    </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-spec">
+                            <label for="inventfilter-species">Species</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-species" role="tabpanel" aria-labelledby="inventfilter-species">
+                                <select name="inventfilter-species" id="ivent-species" class="form-control mySelect">
+                                                    <option value="1">All Species</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-variet">
+                            <label for="inventfilter-varieties">Varieties</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-varieties" role="tabpanel" aria-labelledby="inventfilter-varieties">
+                                <select name="inventfilter-varieties" id="ivent-varieties" class="form-control mySelect">
+                                                    <option value="1">All Varieties</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-length">
+                            <label for="inventfilter-lengths">Lengths</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-lengths" role="tabpanel" aria-labelledby="inventfilter-lengths">
+                                <select name="inventfilter-lengths" id="ivent-lengths" class="form-control mySelect">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-stems">
+                            <label for="inventfilter-stems">Stems</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-stems" role="tabpanel" aria-labelledby="inventfilter-stems">
+                                <select name="inventfilter-stems" id="ivent-stems" class="form-control mySelect">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-colors">
+                            <label for="inventfilter-colors">Colors</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-colors" role="tabpanel" aria-labelledby="inventfilter-colors">
+                                <select name="inventfilter-colors" id="ivent-colors" class="form-control mySelect">
+                                                    <option value="1">All Colors</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-cat">
+                            <label for="inventfilter-categories">Categories</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-categories" role="tabpanel" aria-labelledby="inventfilter-categories">
+                                <select name="inventfilter-categories" id="ivent-categories" class="form-control mySelect">
+                                                    <option value="1">All Categories</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-pack">
+                            <label for="inventfilter-packages">Packages</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-packages" role="tabpanel" aria-labelledby="inventfilter-packages">
+                                <select name="inventfilter-packages" id="ivent-packages" class="form-control mySelect">
+                                                    <option value="1">All</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                        <div class="invfil-stag">
+                            <label for="inventfilter-cutstages">Stages</label>
+                            <div class="selectcontainer fade show active" id="inventfilter-cutstages" role="tabpanel" aria-labelledby="inventfilter-cutstages">
+                                <select name="inventfilter-cutstages" id="ivent-cutstages" class="form-control mySelect">
+                                                    <option value="1">All</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 4</option>
+                                                    <option value="5">Option 5</option>
+                                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade show active" id="nav-liveinventory" role="tabpanel" aria-labelledby="inv-tab-liveinventory">
+                    <table class="table table-inventory-head table-head sticky-head tabscroll">
+
+                        <td class="inv-product">Product <input type="text" class="search-icon"></td>
+                        <td class="inv-ph text-center">PH</td>
+                        <td class="inv-price text-center">($)</td>
+                        <td class="inv-color text-center">CLR</td>
+                        <td class="inv-qty text-center">+1 (382)</td>
+                        <td class="inv-qty text-center">+2 (135)</td>
+                        <td class="inv-qty text-center">+3 (28)</td>
+                        <td class="inv-qty text-center">+4 (13)</td>
+                        <td class="inv-qty text-center">+5 (3)</td>
+                        <td class="inv-qty text-center">D (1206)</td>
+                        <td class="inv-re  text-center border-tl-r">R</td>
+
+                    </table>
+                    <table class="table table-hover table-striped table-inventory-body table-body tabscroll border-bl-r">
+                        <!-- <thead>
+                            <td class="inv-product">Product <input type="text" class="search-icon"></td>
+                            <td class="inv-ph text-center">PH</td>
+                            <td class="inv-price text-center">($)</td>
+                            <td class="inv-color text-center">CLR</td>
+                            <td class="inv-qty text-center">+1 (382)</td>
+                            <td class="inv-qty text-center">+2 (135)</td>
+                            <td class="inv-qty text-center">+3 (28)</td>
+                            <td class="inv-qty text-center">+4 (13)</td>
+                            <td class="inv-qty text-center">+5 (3)</td>
+                            <td class="inv-qty text-center">D (1206)</td>
+                            <td class="inv-re  text-center border-tl-r">R</td>
+                        </thead> -->
+
+                        <tr>
+                            <td class="inv-product">TEST UNOSOF 40cm</td>
+                            <td class="inv-ph text-center">SISA</td>
+                            <td class="inv-price text-center">0.00</td>
+                            <td class="inv-color text-center">
+                                <div class="clr clr-brightpink"></div>
+                            </td>
+                            <td class="inv-qty text-center">0</td>
+                            <td class="inv-qty text-center">0</td>
+                            <td class="inv-qty text-center clr-green">-6</td>
+                            <td class="inv-qty text-center clr-yellow">0</td>
+                            <td class="inv-qty text-center clr-lightpink">0</td>
+                            <td class="inv-qty text-center clr-pink">-9</td>
+                            <td class="inv-re text-center">
+                                <div class="r">R</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inv-product">TEST UNOSOF 40cm</td>
+                            <td class="inv-ph text-center">SISA</td>
+                            <td class="inv-price text-center">0.00</td>
+                            <td class="inv-color text-center">
+                                <div class="clr clr-orange"></div>
+                            </td>
+                            <td class="inv-qty text-center">0</td>
+                            <td class="inv-qty text-center">0</td>
+                            <td class="inv-qty text-center clr-green">-6</td>
+                            <td class="inv-qty text-center clr-yellow">0</td>
+                            <td class="inv-qty text-center clr-lightpink">0</td>
+                            <td class="inv-qty text-center clr-pink">-9</td>
+                            <td class="inv-re text-center">
+                                <div class="r">R</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inv-product">TEST UNOSOF 40cm</td>
+                            <td class="inv-ph text-center">SISA</td>
+                            <td class="inv-price text-center">0.00</td>
+                            <td class="inv-color text-center">
+                                <div class="clr clr-white"></div>
+                            </td>
+                            <td class="inv-qty text-center">0</td>
+                            <td class="inv-qty text-center">0</td>
+                            <td class="inv-qty text-center clr-green">-6</td>
+                            <td class="inv-qty text-center clr-yellow">0</td>
+                            <td class="inv-qty text-center clr-lightpink">0</td>
+                            <td class="inv-qty text-center clr-pink">-9</td>
+                            <td class="inv-re text-center">
+                                <div class="r">R</div>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="nav-dispoboxlist" role="tabpanel" aria-labelledby="inv-tab-dispoboxlist">Dispo Box List</div>
+                <div class="tab-pane fade" id="nav-boxlist" role="tabpanel" aria-labelledby="inv-tab-boxlist">Mixed Box List</div>
+                <div class="tab-pane fade" id="nav-productlist" role="tabpanel" aria-labelledby="inv-tab-productlist">Product List</div>
+                <div class="tab-pane fade" id="nav-orderhistory" role="tabpanel" aria-labelledby="inv-tab-orderhistory">Order History</div>
+            </div>
+        </div>
+
+        <div class="panel panel-box">
+            <div class="navcontainer">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link packagestab active" id="nav-boxpackaging-tab" data-bs-toggle="tab" data-bs-target="#nav-boxpackaging" type="button" role="tab" aria-controls="nav-boxpackaging" aria-selected="true"><span class="no-layout2">Box</span> Packaging</button>
+                        <button class="nav-link" id="nav-pricing-tab" data-bs-toggle="tab" data-bs-target="#nav-pricing" type="button" role="tab" aria-controls="nav-pricing" aria-selected="false">Pricing</button>
+                        <button class="nav-link" id="nav-upc-tab" data-bs-toggle="tab" data-bs-target="#nav-upc" type="button" role="tab" aria-controls="nav-upc" aria-selected="false">UPC</button>
+                        <button class="nav-link" id="nav-extras-tab" data-bs-toggle="tab" data-bs-target="#nav-extras" type="button" role="tab" aria-controls="nav-extras" aria-selected="false">Extras</button>
+                        <button class="nav-link" id="nav-recipes-tab" data-bs-toggle="tab" data-bs-target="#nav-recipes" type="button" role="tab" aria-controls="nav-recipes" aria-selected="false">Recipes</button>
+                        <button class="nav-link" id="nav-fees-tab" data-bs-toggle="tab" data-bs-target="#nav-fees" type="button" role="tab" aria-controls="nav-fees" aria-selected="false">Fees</button>
+                    </div>
+
+                </nav>
+                <div class="panel-controls">
+                    <a class="btn-control-filters" data-bs-toggle="collapse" href="#box-topfunctions" role="button" aria-expanded="false" aria-controls="box-topfunctions">
+                        <span class="icon-filter"></span><span class="no-layout2">Filters</span>
+                    </a>
+                    <button type="button" class="expandcollapse box-pan" data-bs-toggle="button" autocomplete="off"></button>
+                </div>
+            </div>
+            <!-- minibox when panel is collapsed in layout 2 & 3 -->
+            <div class="minibox-container">
+                <div class="ico-cart"></div>
+                <div class="packages-container">
+                    <div class="box-summary">
+                        <div class="label-pack">PACK</div>
+
+                        <div class="lbl-ttl">BOXES</div>
+                        <div class="box-info">1</div>
+
+                        <div class="lbl-ttl">UNITS</div>
+                        <div class="box-info">9</div>
+
+                        <div class="lbl-ttl">STEMS</div>
+                        <div class="box-info">225</div>
+
+                        <div class="lbl-ttl">STEMS $</div>
+                        <div class="box-info">$0.32</div>
+
+                        <div class="lbl-ttl">BUNCH $</div>
+                        <div class="box-info">$72.00</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-content" id="nav-tab-boxes">
+
+                <!-- box packaging  -->
+                <div class="tab-pane fade show active" id="nav-boxpackaging" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                    <div class="topfunctions" id="box-topfunctions">
+                        <div class="funcleft gap-1">
+                            <div class="boxfunc-boxes">
+                                <label for="box-boxes">Boxes</label>
+                                <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                    <div id="" class="minus" onclick="less('qty');"></div>
+                                    <input id="qty1" type="text" value="1" class="qty" />
+                                    <div id="" class="add" onclick="add('qty');"></div>
+
+                                </div>
+                            </div>
+                            <div class="boxfunc-location">
+                                <label for="box-location">Location</label>
+                                <div class="selectcontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                    <select name="boxfunc-location" id="box-location" class="form-control mySelect">
+                                        <option value="1">MACHACHI</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="boxfunc-type">
+                                <label for="box-type">Box Type</label>
+                                <div class="selectcontainer fade show active" id="boxfunc-type" role="tabpanel" aria-labelledby="boxfunc-type">
+                                    <select name="boxfunc-type" id="box-type" class="form-control mySelect">
+                                        <option value="1">QB NATU</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="funcright gap-2">
+                            <div class="boxfunc-calctype">
+                                <label for="box-calctype">Calc Type</label>
+                                <div class="selectcontainer fade show active" id="boxfunc-calctype" role="tabpanel" aria-labelledby="boxfunc-calctype">
+                                    <select name="boxfunc-calctype" id="box-calctype" class="form-control mySelect">
+                                        <option value="1">None</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="boxfunc-avgstem">
+                                <label for="box-calctype">AVG. STEM</label>
+                                <input type="text" id="box-calctype" value="8.00">
+                            </div>
+                            <div class="boxfunc-boxprice">
+                                <label for="box-boxprice">Box Price</label>
+                                <input type="text" id="box-boxprice" value="8.00">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="box-tablecontainer">
+                        <table class="table table-box-head table-head sticky-head tabscroll">
+                            <tr>
+                                <td class="box-farm text-center">Farm</td>
+                                <td class="box-product">Product</td>
+                                <td class="box-color text-center">CLR</td>
+                                <td class="box-moreless text-center">UNITS</td>
+                                <td class="box-price text-center">STEMS</td>
+                                <td class="box-moreless text-center">STEMS $</td>
+                                <td class="box-price text-center">BUNCH $</td>
+                                <td class="box-freight text-center">FREIGHT UNITS $</td>
+                                <td class="box-totalbunch text-center">TOTAL BUNCH $</td>
+                                <td class="box-actions text-center">ACTIONS</td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-striped table-box-body table-body tabscroll border-bl-r">
+                            <tr>
+                                <td class="box-farm text-center">SISA</td>
+                                <td class="box-product">TEST UNOSOF 40cm</td>
+                                <td class="box-color text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('units');"></div>
+                                        <input id="" type="text" value="1" class="units">
+                                        <div id="" class="add" onclick="add('units');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="125" class="inputintable"></td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('stems');"></div>
+                                        <input id="" type="text" value="1" class="stems">
+                                        <div id="" class="add" onclick="add('stems');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-freight text-center"><input type="text" value="0.000000" class="inputintable"></td>
+                                <td class="box-totalbunch text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-actions text-center">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="box-farm text-center">SISA</td>
+                                <td class="box-product">TEST UNOSOF 40cm</td>
+                                <td class="box-color text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('units');"></div>
+                                        <input id="" type="text" value="1" class="units">
+                                        <div id="" class="add" onclick="add('units');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="125" class="inputintable"></td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('stems');"></div>
+                                        <input id="" type="text" value="1" class="stems">
+                                        <div id="" class="add" onclick="add('stems');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-freight text-center"><input type="text" value="0.000000" class="inputintable"></td>
+                                <td class="box-totalbunch text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-actions text-center">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="box-farm text-center">SISA</td>
+                                <td class="box-product">TEST UNOSOF 40cm</td>
+                                <td class="box-color text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('units');"></div>
+                                        <input id="" type="text" value="1" class="units">
+                                        <div id="" class="add" onclick="add('units');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="125" class="inputintable"></td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('stems');"></div>
+                                        <input id="" type="text" value="1" class="stems">
+                                        <div id="" class="add" onclick="add('stems');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-freight text-center"><input type="text" value="0.000000" class="inputintable"></td>
+                                <td class="box-totalbunch text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-actions text-center">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="box-farm text-center">SISA</td>
+                                <td class="box-product">TEST UNOSOF 40cm</td>
+                                <td class="box-color text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('units');"></div>
+                                        <input id="" type="text" value="1" class="units">
+                                        <div id="" class="add" onclick="add('units');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="125" class="inputintable"></td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('stems');"></div>
+                                        <input id="" type="text" value="1" class="stems">
+                                        <div id="" class="add" onclick="add('stems');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-freight text-center"><input type="text" value="0.000000" class="inputintable"></td>
+                                <td class="box-totalbunch text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-actions text-center">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="box-farm text-center">SISA</td>
+                                <td class="box-product">TEST UNOSOF 40cm</td>
+                                <td class="box-color text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('units');"></div>
+                                        <input id="" type="text" value="1" class="units">
+                                        <div id="" class="add" onclick="add('units');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="125" class="inputintable"></td>
+                                <td class="box-moreless text-center">
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('stems');"></div>
+                                        <input id="" type="text" value="1" class="stems">
+                                        <div id="" class="add" onclick="add('stems');"></div>
+                                    </div>
+                                </td>
+                                <td class="box-price text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-freight text-center"><input type="text" value="0.000000" class="inputintable"></td>
+                                <td class="box-totalbunch text-center"><input type="text" value="8.00" class="inputintable"></td>
+                                <td class="box-actions text-center">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-box-summary sticky-head tabscroll">
+                            <tr>
+                                <td class="box-farm text-center"></td>
+                                <td class="box-product"></td>
+                                <td class="box-color text-center"></td>
+                                <td class="box-moreless text-center">9</td>
+                                <td class="box-price text-center">225</td>
+                                <td class="box-moreless text-center">$0.32</td>
+                                <td class="box-price text-center"></td>
+                                <td class="box-freight text-center">$0.00</td>
+                                <td class="box-totalbunch text-center">$72.00</td>
+                                <td class="box-actions text-center"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="bottomfunctions">
+                        <div class="funcleft gap-2">
+                            <a class="d-flex link-arrow" data-bs-toggle="collapse" href="#box-messages" role="button" aria-expanded="false" aria-controls="box-messages">
+                            Add Message
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+                                    <g id="Group_140" data-name="Group 140" transform="translate(-4529 -142)">
+                                                <rect id="Rectangle_41" data-name="Rectangle 41" width="42" height="42" transform="translate(4529 142)" fill="none"></rect>
+                                                <g id="right-arrow_1_" data-name="right-arrow (1)" transform="translate(4559.889 157) rotate(90)">
+                                                <g id="Group_31" data-name="Group 31" transform="translate(0 0)">
+                                                <path id="Path_3" data-name="Path 3" d="M10.8,8.707,2.39.3A1.036,1.036,0,0,0,.929.3L.31.921a1.035,1.035,0,0,0,0,1.461L7.368,9.44.3,16.507a1.036,1.036,0,0,0,0,1.461l.619.619a1.035,1.035,0,0,0,1.461,0L10.8,10.174a1.043,1.043,0,0,0,0-1.466Z" transform="translate(0 0)" fill="#26c0b7"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </i>
+                            </a>
+                            <div class="textareacont" id="box-messages">
+                                <textarea name="" id="customer-label" class="messagebox" cols="30" rows="10" placeholder="CUSTOMER BOX LABEL:"></textarea>
+                                <textarea name="" id="message-toharvest" class="messagebox" cols="30" rows="10" placeholder="MESSAGE TO POST HARVEST:"></textarea>
+                            </div>
+                        </div>
+                        <div class="funcright gap-2">
+                            <button class="btn btn-cancel" value="CLEAR BOX">CLEAR BOX</button>
+                            <button class="btn btn-save" value="SAVE BOX">SAVE BOX</button>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- END box packaging  -->
+
+                <!-- box pricing  -->
+                <div class="tab-pane fade" id="nav-pricing" role="tabpanel" aria-labelledby="pack-tab-pricing">
+                    <div class="topsection">
+                        <div class="funcleft gap-1">
+                            <div class="boxfunc-70">
+                                <label for="box-calctype"></label>
+                                <input type="text" class="search-icon">
+                            </div>
+                            <div class="boxfunc-30">
+                                <label for="box-calctype">TOTAL FREIGHT</label>
+                                <input type="text" id="" value="0.00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-tablecontainer tabscroll-x">
+                        <table class="table table-price-head table-head sticky-head tabscroll">
+                            <tr>
+                                <td class="td-w-4 max-w-40 text-center">LOC</td>
+                                <td class="td-w-20 max-w-200">Product</td>
+                                <td class="td-w-7 max-w-70  text-center">Mixed</td>
+                                <td class="td-w-5 max-w-50 text-center">CLR</td>
+                                <td class="td-w-6 max-w-60 text-center">Units</td>
+
+                                <td class="td-w-6 max-w-60 text-center">STEMS</td>
+                                <td class="td-w-6 max-w-60 text-center">STEMS $</td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space">FLOWER <br>UNIT $</td>
+                                <td class="td-w-6 max-w-60 text-center break-space">FREIGHT <br>STEM $</td>
+                                <td class="td-w-6 max-w-60 text-center break-space">FREIGHT <br>UNIT $</td>
+                                <td class="td-w-6 max-w-60 text-center break-space">ALL-IN <br>STEM $</td>
+                                <td class="td-w-6 max-w-60 text-center break-space">ALL-IN <br>UNIT $</td>
+                                <td class="td-w-8 max-w-80 text-center break-space">SUBT <br>FLOWERS $</td>
+
+                                <td class="td-w-4 max-w-40 text-center">TAX?</td>
+
+                                <td class="td-w-8 max-w-80 text-center break-space">TAX <br>ACCT</td>
+
+                                <td class="td-w-5 max-w-50 text-center">TAX $</td>
+                                <td class="td-w-5 max-w-50 text-center">TOTAL $</td>
+                            </tr>
+                            <!-- <tr class="functiontoall">
+                                <td class="td-w-4 max-w-40 text-center"></td>
+                                <td class="td-w-20 max-w-200  text-left"></td>
+                                <td class="td-w-7 max-w-70  text-center"></td>
+
+                                <td class="td-w-5 max-w-50 text-center"></td>
+
+                                <td class="td-w-6 max-w-60 text-center"></td>
+                                <td class="td-w-6 max-w-60 text-center"></td>
+
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.0000" class="inputintable"></td>
+
+                                <td class="td-w-6 max-w-60 text-center"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-8 max-w-80 text-center"></td>
+
+                                <td class="td-w-4 max-w-40 text-center">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                </td>
+                                <td class="td-w-8 max-w-80 text-center"></td>
+                                <td class="td-w-5 max-w-50 text-center"></td>
+                                <td class="td-w-5 max-w-50 text-center"></td>
+                            </tr> -->
+                        </table>
+                        <table class="table table-hover table-striped table-price-body table-body tabscroll border-bl-r">
+                            <tr>
+                                <td class="td-w-4 max-w-40 text-center">RLM</td>
+                                <td class="td-w-20 max-w-200  text-left">EXPLORER 60CM N 25ST 1SCS</td>
+                                <td class="td-w-7 max-w-70  text-center">SOLID</td>
+
+                                <td class="td-w-5 max-w-50 text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+
+                                <td class="td-w-6 max-w-60 text-center">5</td>
+                                <td class="td-w-6 max-w-60 text-center">25</td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-8 max-w-80 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+
+                                <td class="td-w-4 max-w-40 text-center">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                </td>
+
+                                <td class="td-w-8 max-w-80 text-center">
+                                    <div class="boxfunc-location">
+                                        <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                            <select name="boxfunc-location" id="" class="form-control mySelect">
+                                                    <option value="1">0.12%</option>
+                                                    <option value="2">0.14%</option>
+                                                </select>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <td class="td-w-5 max-w-50 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-5 max-w-50 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                            </tr>
+                            <tr>
+                                <td class="td-w-4 max-w-40 text-center">RLM</td>
+                                <td class="td-w-20 max-w-200  text-left">EXPLORER 60CM N 25ST 1SCS</td>
+                                <td class="td-w-7 max-w-70  text-center">SOLID</td>
+
+                                <td class="td-w-5 max-w-50 text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+
+                                <td class="td-w-6 max-w-60 text-center">5</td>
+                                <td class="td-w-6 max-w-60 text-center">25</td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-8 max-w-80 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+
+                                <td class="td-w-4 max-w-40 text-center">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                </td>
+
+                                <td class="td-w-8 max-w-80 text-center">
+                                    <div class="boxfunc-location">
+                                        <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                            <select name="boxfunc-location" id="" class="form-control mySelect">
+                                                    <option value="1">0.12%</option>
+                                                    <option value="2">0.14%</option>
+                                                </select>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <td class="td-w-5 max-w-50 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-5 max-w-50 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                            </tr>
+                            <tr>
+                                <td class="td-w-4 max-w-40 text-center">RLM</td>
+                                <td class="td-w-20 max-w-200  text-left">EXPLORER 60CM N 25ST 1SCS</td>
+                                <td class="td-w-7 max-w-70  text-center">SOLID</td>
+
+                                <td class="td-w-5 max-w-50 text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+
+                                <td class="td-w-6 max-w-60 text-center">5</td>
+                                <td class="td-w-6 max-w-60 text-center">25</td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.0000" class="inputintable"></td>
+
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-8 max-w-80 text-center break-space"><input type="text" placeholder="0.00" class="inputintable"></td>
+
+                                <td class="td-w-4 max-w-40 text-center">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                </td>
+
+                                <td class="td-w-8 max-w-80 text-center">
+                                    <div class="boxfunc-location">
+                                        <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                            <select name="boxfunc-location" id="" class="form-control mySelect">
+                                                    <option value="1">0.12%</option>
+                                                    <option value="2">0.14%</option>
+                                                </select>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <td class="td-w-5 max-w-50 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-5 max-w-50 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                            </tr>
+                        </table>
+                        <table class="table table-price-head table-head sticky-head tabscroll">
+                            <tr class="functiontoall">
+                                <td class="td-w-4 max-w-40 text-center"></td>
+                                <td class="td-w-20 max-w-200  text-left"><i>For all the products</i> </td>
+                                <td class="td-w-7 max-w-70  text-center"></td>
+
+                                <td class="td-w-5 max-w-50 text-center"></td>
+
+                                <td class="td-w-6 max-w-60 text-center"></td>
+                                <td class="td-w-6 max-w-60 text-center"></td>
+
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.0000" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.0000" class="inputintable"></td>
+
+                                <td class="td-w-6 max-w-60 text-center"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-6 max-w-60 text-center"><input type="text" placeholder="0.00" class="inputintable"></td>
+                                <td class="td-w-8 max-w-80 text-center"></td>
+
+                                <td class="td-w-4 max-w-40 text-center">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                </td>
+                                <td class="td-w-8 max-w-80 text-center"></td>
+                                <td class="td-w-5 max-w-50 text-center"></td>
+                                <td class="td-w-5 max-w-50 text-center"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between gap-3 align-items-center bottom-actions">
+                        <div class="links">
+                            <a href="">Calculate Freight</a>
+                            <a href="">Compund Pricing</a>
+                            <a href="">Use Last Pricing</a>
+                            <a href="">Use Pricesheet</a>
+                        </div>
+                        <button class="btn btn-save " value="SAVE BOX">SAVE PRICING</button>
+                    </div>
+
+                </div>
+                <!-- END box pricing  -->
+
+                <!-- box UPC  -->
+                <div class="tab-pane fade" id="nav-upc" role="tabpanel" aria-labelledby="pack-tab-upc">
+                    <div class="topsection">
+                        <div class="funcleft gap-1">
+                            <div class="boxfunc-70">
+                                <label for="box-calctype"></label>
+                                <input type="text" class="search-icon">
+                            </div>
+                            <div class="boxfunc-30">
+                                <label for="box-calctype">TOTAL FREIGHT</label>
+                                <input type="text" id="" value="0.00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-tablecontainer tabscroll-x">
+                        <table class="table table-upc-head table-head sticky-head tabscroll">
+                            <tr>
+                                <td class="td-w-5 text-center">FARM</td>
+                                <td class="td-w-27">PRODUCT</td>
+                                <td class="td-w-5 text-center">QTY</td>
+                                <td class="td-w-5 text-center">CLR</td>
+                                <td class="td-w-10 text-center">BARCODE</td>
+
+                                <td class="td-w-8 text-center">UPC</td>
+                                <td class="td-w-8 text-center">LABEL 1</td>
+                                <td class="td-w-8 text-center">LABEL 2</td>
+                                <td class="td-w-8 text-center">LABEL 3</td>
+                                <td class="td-w-8 text-center">LABEL 4</td>
+                                <td class="td-w-8 text-center">PREVIEW</td>
+                            </tr>
+
+                        </table>
+                        <table class="table table-hover table-striped table-upc-body table-body tabscroll border-bl-r">
+                            <tr>
+                                <td class="td-w-5 text-center">SISA</td>
+                                <td class="td-w-27 text-left">EXPLORER 60CM N 25ST 1SCS</td>
+                                <td class="td-w-5 text-center">1</td>
+                                <td class="td-w-5 text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="td-w-10 text-center">
+                                    <div class="boxfunc-location">
+                                        <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                            <select name="boxfunc-location" id="" class="form-control mySelect">
+                                                    <option value="1">Select</option>
+                                                    <option value="2">Option 1</option>
+                                                    <option value="3">Option 2</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <a href="">Preview</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-w-5 text-center">SISA</td>
+                                <td class="td-w-27 text-left">EXPLORER 60CM N 25ST 1SCS</td>
+                                <td class="td-w-5 text-center">1</td>
+                                <td class="td-w-5 text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="td-w-10 text-center">
+                                    <div class="boxfunc-location">
+                                        <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                            <select name="boxfunc-location" id="" class="form-control mySelect">
+                                                    <option value="1">Select</option>
+                                                    <option value="2">Option 1</option>
+                                                    <option value="3">Option 2</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <a href="">Preview</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-w-5 text-center">SISA</td>
+                                <td class="td-w-27 text-left">EXPLORER 60CM N 25ST 1SCS</td>
+                                <td class="td-w-5 text-center">1</td>
+                                <td class="td-w-5 text-center">
+                                    <div class="clr clr-brightpink"></div>
+                                </td>
+                                <td class="td-w-10 text-center">
+                                    <div class="boxfunc-location">
+                                        <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                            <select name="boxfunc-location" id="" class="form-control mySelect">
+                                                    <option value="1">Select</option>
+                                                    <option value="2">Option 1</option>
+                                                    <option value="3">Option 2</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <input type="text" placeholder="" class="inputintable">
+                                </td>
+                                <td class="td-w-8 text-center">
+                                    <a href="">Preview</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-3 bottom-actions p-2">
+                        <button class="btn btn-save " value="SAVE BOX">SAVE UPC</button>
+                    </div>
+                </div>
+                <!-- END box UPC  -->
+                <!-- Extras  -->
+                <div class="tab-pane fade" id="nav-extras" role="tabpanel" aria-labelledby="pack-tab-extras">
+                    <div class="topsection">
+                        <div class="d-flex justify-content-end gap-2">
+                            <div class="boxfunc-70">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                    <label for="box-type">Extras:</label>
+                                    <select name="boxfunc-location" id="" class="form-control mySelect">
+                                    <option value="1">Select</option>
+                                    <option value="2">Option 1</option>
+                                    <option value="3">Option 2</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="boxfunc-20">
+                                <label for="box-calctype">STEMS:</label>
+                                <input type="text" id="" placeholder="0.00">
+                            </div>
+                            <div class="boxfunc-20">
+                                <label for="box-calctype">RATE:</label>
+                                <input type="text" id="" placeholder="0.000">
+                            </div>
+                            <!-- <div class="buttons">
+                                <button class="btn btn-save " value="SAVE BOX">SAVE EXTRAS</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="box-tablecontainer tabscroll-x">
+                        <table class="table table-extra-head table-head sticky-head tabscroll">
+                            <tr>
+                                <td class="td-w-55">PRODUCT</td>
+                                <td class="td-w-15 text-center">STEMS</td>
+
+                                <td class="td-w-15 text-center">BUNCHRATE</td>
+                                <td class="td-w-15 text-center">STEM DELETE</td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-striped table-extra-body table-body tabscroll border-bl-r">
+                            <tr>
+                                <td class="td-w-55">&nbsp;</td>
+                                <td class="td-w-15 text-center">&nbsp;</td>
+
+                                <td class="td-w-15 text-center">&nbsp;</td>
+                                <td class="td-w-15 text-center">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 bottom-actions p-2">
+                        <button class="btn btn-save " value="SAVE EXTRAS">SAVE EXTRAS</button>
+                    </div>
+                </div>
+                <!-- END Extras  -->
+                <!-- Recipes  -->
+                <div class="tab-pane fade" id="nav-recipes" role="tabpanel" aria-labelledby="pack-tab-recipes">
+
+                    <div class="box-tablecontainer tabscroll-x">
+                        <table class="table table-recipes-head table-head sticky-head tabscroll">
+                            <tr>
+                                <td class="td-w-30">RECIPE</td>
+                                <td class="td-w-15 text-center">QUANTITY</td>
+                                <td class="td-w-15 text-center">COST PRICE</td>
+                                <td class="td-w-20 text-center">CALCULATED RATE</td>
+                                <td class="td-w-20 text-center">CONSUMER PRICE</td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-striped table-recipes-body table-body tabscroll border-bl-r">
+                            <tr>
+                                <td class="td-w-55">&nbsp;</td>
+                                <td class="td-w-15 text-center">&nbsp;</td>
+
+                                <td class="td-w-15 text-center">&nbsp;</td>
+                                <td class="td-w-15 text-center">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 bottom-actions p-2">
+                        <div class="links">
+                            <a href="">RECIPE REPORT</a>
+                            <a href="">SPEC SHEET</a>
+                            <a href="">RECIPE PRICING</a>
+                            <a href="">ASSIGN RECIPES</a>
+                            <a href="">ASSIGN PACKAGE TYPES</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Recipes  -->
+                <!-- fees  -->
+                <div class="tab-pane fade" id="nav-fees" role="tabpanel" aria-labelledby="pack-tab-fees">
+                    <div class="topsection">
+                        <div class="d-flex justify-content-end gap-2">
+                            <div class="boxfunc-20">
+                                <label for="box-calctype">QTY:</label>
+                                <input type="text" id="" placeholder="1">
+                            </div>
+                            <div class="boxfunc-30">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                    <label for="box-type">Location:</label>
+                                    <select name="boxfunc-location" id="" class="form-control mySelect">
+                                    <option value="1">- Select</option>
+                                    <option value="2">Option 1</option>
+                                    <option value="3">Option 2</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="boxfunc-30">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="boxfunc-location">
+                                    <label for="box-type">Services/Fee:</label>
+                                    <select name="boxfunc-location" id="" class="form-control mySelect">
+                                    <option value="1">Select</option>
+                                    <option value="2">Option 1</option>
+                                    <option value="3">Option 2</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="boxfunc-20">
+                                <label for="box-calctype">Rate/Unit:</label>
+                                <input type="text" id="" placeholder="0.0000">
+                            </div>
+                            <!-- <div class="buttons">
+                                <button class="btn btn-save " value="SAVE BOX">SAVE EXTRAS</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="box-tablecontainer tabscroll-x">
+                        <table class="table table-fees-head table-head sticky-head tabscroll">
+                            <tr>
+                                <td class="td-w-5 text-center">QTY</td>
+                                <td class="td-w-35">PRODUCT</td>
+                                <td class="td-w-15 text-center">PRICE UNIT</td>
+
+                                <td class="td-w-15 text-center">PRICE TOTAL</td>
+                                <td class="td-w-15 text-center">TOTAL</td>
+                                <td class="td-w-15 text-center">DELETE</td>
+                            </tr>
+                        </table>
+                        <table class="table table-hover table-striped table-fees-body table-body tabscroll border-bl-r">
+                            <tr>
+                                <td class="td-w-55">&nbsp;</td>
+                                <td class="td-w-15 text-center">&nbsp;</td>
+
+                                <td class="td-w-15 text-center">&nbsp;</td>
+                                <td class="td-w-15 text-center">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 bottom-actions p-2">
+                        <button class="btn btn-save">SAVE</button>
+                    </div>
+                </div>
+                <!-- END fees  -->
+            </div>
+        </div>
+
+        <div class="panel panel-packages">
+            <div class="navcontainer">
+                <nav class="justify-content-end">
+
+                </nav>
+                <div class="panel-controls">
+                    <button type="button" class="btn-packages-fullpanel" data-bs-toggle="button" autocomplete="off"></button>
+                    <button type="button" class="expandcollapse pack-pan" data-bs-toggle="button" aria-pressed="false"></button>
+                </div>
+
+
+            </div>
+            <!-- minibox when panel is collapsed in layout 2 & 3 -->
+            <div class="mini-packages-container">
+                <div class="ico-package"></div>
+                <div class="packages-container">
+                    <div class="pckgs gap-2">
+                        <div class="packagebox status-ready">
+                            <div class="pckg-bunches">11 bu.</div>
+                            <div class="pckg-farm"><strong>PH</strong> MA</div>
+                            <div class="pckg-boxtotal">$88.00</div>
+                            <div class="status ready">
+                                <div>RS</div>
+                                <i class="status-icon"></i>
+                            </div>
+                        </div>
+                        <div class="packagebox status-notconfirm">
+                            <div class="pckg-bunches">11 bu.</div>
+                            <div class="pckg-farm"><strong>PH</strong> MA</div>
+                            <div class="pckg-boxtotal">$88.00</div>
+                            <div class="status notconfirm">
+                                <div>NC</div>
+                                <i class="status-icon"></i>
+                            </div>
+                        </div>
+                        <div class="packagebox status-paidconfirm">
+                            <div class="pckg-bunches">11 bu.</div>
+                            <div class="pckg-farm"><strong>PH</strong> MA</div>
+                            <div class="pckg-boxtotal">$88.00</div>
+                            <div class="status paidconfirm">
+                                <div>PC</div>
+                                <i class="status-icon"></i>
+                            </div>
+                        </div>
+                        <div class="packagebox status-cantconfirm">
+                            <div class="pckg-bunches">11 bu.</div>
+                            <div class="pckg-farm"><strong>PH</strong> MA</div>
+                            <div class="pckg-boxtotal">$88.00</div>
+                            <div class="status cantconfirm">
+                                <div>CC</div>
+                                <i class="status-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-ordertotal">$120.00 <span>Total</span></div>
+            </div>
+
+            <!-- END Mini packages products DEMO, when panel is collapsed -->
+            <div class="tab-content" id="nav-tab-packages">
+                <div class="top-actions">
+                    <div class="inputs gap-2">
+                        <div class="selectcontainer fade show active" id="nav-boxpackaging" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                            <select name="demo-select" id="" class="form-control mySelect">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+
+                        </div>
+
+                        <input type="text" class="search-icon">
+                    </div>
+                    <div class="links">
+                        <div class="form-check d-flex">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" data-bs-toggle="collapse" href="#messagetoallpckgs" role="button" aria-expanded="false" aria-controls="">
+                            Messages to all packages
+                        </label>
+                        </div>
+
+                        <!-- <a href="" type="button" data-bs-toggle="collapse" data-bs-target=".all-messages" aria-expanded="false" aria-controls="" class="allmsjs showall">See All</a> -->
+                        <!-- <a href="" type="button" data-bs-toggle="collapse" class="allmsjs showall" aria-expanded="false">See All func</a> -->
+                        <button class="allmsjs showall">See All</button>
+                    </div>
+                </div>
+                <div class="collapse" id="messagetoallpckgs">
+                    <textarea name="" id="allpckgs-customer-label" cols="30" rows="10" placeholder="CUSTOMER BOX LABEL:" spellcheck="false"></textarea>
+                    <textarea name="" id="allpckgs-message-toharvest" cols="30" rows="10" placeholder="MESSAGE TO POST HARVEST:"></textarea>
+                </div>
+
+                <div class="packages-container">
+                    <!-- packages products DEMO -->
+                    <div class="pckgs">
+                        <div class="packagebox status-ready">
+                            <div class="pckg-header">
+                                <div class="info-left gap-2">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                    <div class="pckg-boxtype">QB KOROLLARIUM</div>
+                                    <div class="pckg-boxtotal">$88.00</div>
+                                </div>
+                                <div class="pckg-action-icons gap-2">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                    <a href="" class="ico-copy"></a>
+                                </div>
+                            </div>
+                            <div class="pckg-infosummary gap-2">
+                                <div class="pckg-orderid">900132945</div>
+                                <div class="pckg-bunches">11 bu.</div>
+                                <div class="pckg-st">275 st</div>
+                                <div class="pckg-farm">MACHACHI</div>
+                            </div>
+                            <div class="pckg-products">
+                                <div class="pckg-product">
+                                    <div class="pckg-pro-name">COOL WATER 50CM N 25ST 1NCS</div>
+                                    <div class="pckg-pro-price">$0.32</div>
+                                    <div class="pckg-pro-qty">4x</div>
+                                </div>
+                            </div>
+                            <div class="pckg-status gap-2">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                                    <select name="demo-select" id="" class="form-control mySelect">
+                                        <option value="1">QB KOROLLARIUM</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                                <div class="status ready">
+                                    <div>READY</div>
+                                    <i class="status-icon"></i>
+                                </div>
+                            </div>
+                            <div class="pckg-actions">
+                                <a class="linkdarkbg btn-pckg-addmessage" data-bs-toggle="collapse" href="#thismessage" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Message
+                            </a>
+                                <a href="" class="linkdarkbg confirm-box">Confirm Box</a>
+                            </div>
+                            <div class="collapse all-messages" id="thismessage">
+                                <textarea name="" id="pckg-customer-label" cols="30" rows="10" placeholder="CUSTOMER BOX LABEL:" spellcheck="false"></textarea>
+                                <textarea name="" id="pckg-message-toharvest" cols="30" rows="10" placeholder="MESSAGE TO POST HARVEST:"></textarea>
+                            </div>
+                        </div>
+                        <div class="packagebox status-notconfirm">
+                            <div class="pckg-header">
+                                <div class="info-left gap-2">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                    <div class="pckg-boxtype">QB KOROLLARIUM</div>
+                                    <div class="pckg-boxtotal">$88.00</div>
+                                </div>
+                                <div class="pckg-action-icons gap-2">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                    <a href="" class="ico-copy"></a>
+                                </div>
+                            </div>
+                            <div class="pckg-infosummary gap-2">
+                                <div class="pckg-orderid">900132945</div>
+                                <div class="pckg-bunches">11 bu.</div>
+                                <div class="pckg-st">275 st</div>
+                                <div class="pckg-farm">MACHACHI</div>
+                            </div>
+                            <div class="pckg-products">
+                                <div class="pckg-product">
+                                    <div class="pckg-pro-name">COOL WATER 50CM N 25ST 1NCS</div>
+                                    <div class="pckg-pro-price">$0.32</div>
+                                    <div class="pckg-pro-qty">4x</div>
+                                </div>
+                            </div>
+                            <div class="pckg-status gap-2">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                                    <select name="demo-select" id="" class="form-control mySelect">
+                                        <option value="1">QB KOROLLARIUM</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                                <div class="status notconfirm">
+                                    <div>NOT CONFIRM</div>
+                                    <i class="status-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="pckg-actions">
+                                <a class="linkdarkbg btn-pckg-addmessage" data-bs-toggle="collapse" href="#thismessage2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Message
+                            </a>
+                                <a href="" class="linkdarkbg confirm-box">Confirm Box</a>
+                            </div>
+                            <div class="collapse all-messages" id="thismessage2">
+                                <textarea name="" id="pckg-customer-label" cols="30" rows="10" placeholder="CUSTOMER BOX LABEL:" spellcheck="false"></textarea>
+                                <textarea name="" id="pckg-message-toharvest" cols="30" rows="10" placeholder="MESSAGE TO POST HARVEST:"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="packagebox status-paidconfirm">
+                            <div class="pckg-header">
+                                <div class="info-left gap-2">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                    <div class="pckg-boxtype">QB KOROLLARIUM</div>
+                                    <div class="pckg-boxtotal">$88.00</div>
+                                </div>
+                                <div class="pckg-action-icons gap-2">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                    <a href="" class="ico-copy"></a>
+                                </div>
+                            </div>
+                            <div class="pckg-infosummary gap-2">
+                                <div class="pckg-orderid">900132945</div>
+                                <div class="pckg-bunches">11 bu.</div>
+                                <div class="pckg-st">275 st</div>
+                                <div class="pckg-farm">MACHACHI</div>
+                            </div>
+                            <div class="pckg-products">
+                                <div class="pckg-product">
+                                    <div class="pckg-pro-name">COOL WATER 50CM N 25ST 1NCS</div>
+                                    <div class="pckg-pro-price">$0.32</div>
+                                    <div class="pckg-pro-qty">4x</div>
+                                </div>
+                                <div class="pckg-product">
+                                    <div class="pckg-pro-name">COOL WATER 50CM N 25ST 1NCS</div>
+                                    <div class="pckg-pro-price">$0.32</div>
+                                    <div class="pckg-pro-qty">4x</div>
+                                </div>
+                            </div>
+                            <div class="pckg-status gap-2">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                                    <select name="demo-select" id="" class="form-control mySelect">
+                                        <option value="1">QB KOROLLARIUM</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                                <div class="status paidconfirm">
+                                    <div>PAID CONFIRM</div>
+                                    <i class="status-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="pckg-actions">
+                                <a class="linkdarkbg btn-pckg-addmessage" data-bs-toggle="collapse" href="#thismessage3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Message
+                            </a>
+                                <a href="" class="linkdarkbg confirm-box">Confirm Box</a>
+                            </div>
+                            <div class="collapse all-messages" id="thismessage3">
+                                <textarea name="" id="pckg-customer-label" cols="30" rows="10" placeholder="CUSTOMER BOX LABEL:" spellcheck="false"></textarea>
+                                <textarea name="" id="pckg-message-toharvest" cols="30" rows="10" placeholder="MESSAGE TO POST HARVEST:"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="packagebox status-cantconfirm">
+                            <div class="pckg-header">
+                                <div class="info-left gap-2">
+                                    <div class="form-check d-flex">
+                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                    </div>
+                                    <div class="pckg-boxtype">QB KOROLLARIUM</div>
+                                    <div class="pckg-boxtotal">$88.00</div>
+                                </div>
+                                <div class="pckg-action-icons gap-2">
+                                    <a href="" class="ico-edit"></a>
+                                    <a href="" class="ico-delete"></a>
+                                    <a href="" class="ico-copy"></a>
+                                </div>
+                            </div>
+                            <div class="pckg-infosummary gap-2">
+                                <div class="pckg-orderid">900132945</div>
+                                <div class="pckg-bunches">11 bu.</div>
+                                <div class="pckg-st">275 st</div>
+                                <div class="pckg-farm">MACHACHI</div>
+                            </div>
+                            <div class="pckg-products">
+                                <div class="pckg-product">
+                                    <div class="pckg-pro-name">COOL WATER 50CM N 25ST 1NCS</div>
+                                    <div class="pckg-pro-price">$0.32</div>
+                                    <div class="pckg-pro-qty">4x</div>
+                                </div>
+                            </div>
+                            <div class="pckg-status gap-2">
+                                <div class="selectcontainer fade show active" id="" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                                    <select name="demo-select" id="" class="form-control mySelect">
+                                        <option value="1">QB KOROLLARIUM</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                                <div class="status cantconfirm">
+                                    <div>CAN'T CONFIRM</div>
+                                    <i class="status-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="pckg-actions">
+                                <a class="linkdarkbg btn-pckg-addmessage" data-bs-toggle="collapse" href="#thismessage4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Message
+                            </a>
+                                <a href="" class="linkdarkbg confirm-box">Confirm Box</a>
+                            </div>
+                            <div class="collapse all-messages" id="thismessage4">
+                                <textarea name="" id="pckg-customer-label" cols="30" rows="10" placeholder="CUSTOMER BOX LABEL:" spellcheck="false"></textarea>
+                                <textarea name="" id="pckg-message-toharvest" cols="30" rows="10" placeholder="MESSAGE TO POST HARVEST:"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- END of packages products DEMO -->
+
+                </div>
+                <!-- <div class="mini-ordertotal">$120.00 <span>Total</span></div> -->
+                <div class="po-summary">
+                    <div class="top-actions">
+                        <div class="inputs gap-2">
+                            <div class="selectcontainer fade show active" id="nav-boxpackaging" role="tabpanel" aria-labelledby="pack-tab-boxpackaging">
+                                <select name="demo-select" id="" class="form-control mySelect">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Option 5</option>
+                        </select>
+
+                            </div>
+
+                            <input type="text" class="search-icon">
+                        </div>
+                        <div class="links">
+                            <div class="form-check d-flex">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                <label class="form-check-label" for="flexCheckDefault2" data-bs-toggle="collapse" href="#messagetoallpckgs" role="button" aria-expanded="false" aria-controls="">
+                            Messages to all packages
+                        </label>
+                            </div>
+
+                            <button class="allmsjs showall">See All</button>
+                        </div>
+                    </div>
+
+                    <div class="totalprice">
+                        <a class="d-flex link-arrow showtaxeslink" data-bs-toggle="collapse" href=".taxes" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Taxes
+                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+                                                    <g id="Group_140" data-name="Group 140" transform="translate(-4529 -142)">
+                                                        <rect id="Rectangle_41" data-name="Rectangle 41" width="42" height="42" transform="translate(4529 142)" fill="none"></rect>
+                                                        <g id="right-arrow_1_" data-name="right-arrow (1)" transform="translate(4559.889 157) rotate(90)">
+                                                            <g id="Group_31" data-name="Group 31" transform="translate(0 0)">
+                                                                <path id="Path_3" data-name="Path 3" d="M10.8,8.707,2.39.3A1.036,1.036,0,0,0,.929.3L.31.921a1.035,1.035,0,0,0,0,1.461L7.368,9.44.3,16.507a1.036,1.036,0,0,0,0,1.461l.619.619a1.035,1.035,0,0,0,1.461,0L10.8,10.174a1.043,1.043,0,0,0,0-1.466Z" transform="translate(0 0)" fill="#26c0b7"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                            </i>
+                        </a>
+                        <h5>Order Total: $120.00</h5>
+                    </div>
+                    <div class="totals-container taxes">
+                        <table class="totals borderless" width="100%">
+                            <tr>
+                                <td width="50%" class="pe-1">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>
+                                                Tax Total
+                                            </td>
+                                            <td align="right">
+                                                $0.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Freight Total
+                                            </td>
+                                            <td align="right">
+                                                $0.00
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+
+                                                <a class="d-flex link-arrow" data-bs-toggle="collapse" href="#retentions" role="button" aria-expanded="false" aria-controls="retentions">
+                                                 Retention<i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+                                                <g id="Group_140" data-name="Group 140" transform="translate(-4529 -142)">
+                                                    <rect id="Rectangle_41" data-name="Rectangle 41" width="42" height="42" transform="translate(4529 142)" fill="none"></rect>
+                                                    <g id="right-arrow_1_" data-name="right-arrow (1)" transform="translate(4559.889 157) rotate(90)">
+                                                        <g id="Group_31" data-name="Group 31" transform="translate(0 0)">
+                                                            <path id="Path_3" data-name="Path 3" d="M10.8,8.707,2.39.3A1.036,1.036,0,0,0,.929.3L.31.921a1.035,1.035,0,0,0,0,1.461L7.368,9.44.3,16.507a1.036,1.036,0,0,0,0,1.461l.619.619a1.035,1.035,0,0,0,1.461,0L10.8,10.174a1.043,1.043,0,0,0,0-1.466Z" transform="translate(0 0)" fill="#26c0b7"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </i>
+                                            </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="50%" class="ps-1">
+                                    <table width="100%">
+                                        <tr>
+                                            <td>
+                                                Tax Total
+                                            </td>
+                                            <td align="right" $0.00 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Freight Total
+                                            </td>
+                                            <td align="right">
+                                                $0.00
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Total Stems
+                                            </td>
+                                            <td align="right">
+                                                300
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </td>
+                            </tr>
+                        </table>
+                        <div class="collapse" id="retentions">
+                            <table width="100%">
+                                <tr>
+                                    <td width="8%">
+                                        <div class="form-check d-flex" style="padding-left: 0;">
+                                            <input class="form-check-input" type="checkbox" value="" id="retention-1" style="margin: 0px;">
+                                        </div>
+                                    </td>
+                                    <td width="72%">
+                                        <div class="selectcontainer fade show active" id="retention1-select" role="tabpanel" aria-labelledby="retention1-select">
+                                            <select name="retention1-select" id="retention1-select" class="form-control mySelect">
+                                            <option value="1">Ret. 1%</option>
+                                            <option value="2">Ret. 2%</option>
+                                        </select>
+                                        </div>
+                                    </td>
+                                    <td width="20%" align="right">
+                                        $0.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="8%">
+                                        <div class="form-check d-flex" style="padding-left: 0;">
+                                            <input class="form-check-input" type="checkbox" value="" id="retention-2" style="margin: 0px;">
+                                        </div>
+                                    </td>
+                                    <td width="72%">
+                                        <div class="selectcontainer fade show active" id="retention2-select" role="tabpanel" aria-labelledby="retention2-select">
+                                            <select name="retention2-select" id="retention2-select" class="form-control mySelect">
+                                            <option value="1">Ret. 1%</option>
+                                            <option value="2">Ret. 2%</option>
+                                        </select>
+                                        </div>
+                                    </td>
+                                    <td width="20%" align="right">
+                                        $0.00
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <textarea name="" id="" class="" cols="30" rows="10" placeholder="Customer PO message:"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-po-customer-info" tabindex="-1" aria-labelledby="po-customer-info" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                    <button type="button" class="btn-close float-right" data-bs-dismiss="modal" aria-label="Close" style="width: 26px; height:26px; background: transparent;  border:0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22.007" height="22.007"
+                            viewBox="0 0 22.007 22.007">
+                            <path id="close_1_" data-name="close (1)"
+                                d="M14.634,11,21.442,4.2a1.925,1.925,0,0,0,0-2.723L20.535.566a1.925,1.925,0,0,0-2.723,0L11,7.373,4.2.564a1.925,1.925,0,0,0-2.723,0l-.909.908a1.925,1.925,0,0,0,0,2.723L7.373,11,.566,17.812a1.925,1.925,0,0,0,0,2.723l.908.908a1.925,1.925,0,0,0,2.723,0L11,14.634l6.808,6.808a1.925,1.925,0,0,0,2.723,0l.908-.908a1.925,1.925,0,0,0,0-2.723Zm0,0"
+                                fill="#fff" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body d-flex">
+                    <form action="" id="po-customer-info">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <div class="col-12 mb-20px">
+                                        <label for="po-bill-customer" class="form-label mb-1 text-white">Bill Customer</label>
+                                        <select name="po-bill-customer" id="po-bill-customer" class="form-control mySelect">
+                                    <option value="1">SELECT BILLING CUSTOMER</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="col-12 mb-20px">
+                                        <label for="po-ship-customer" class="form-label mb-1 text-white">Ship Customer</label>
+                                        <select name="po-bill-customer" id="po-ship-customer" class="form-control mySelect">
+                                    <option value="1">SELECT BILLING CUSTOMER</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="row mb-20px">
+                                        <div class="col-6">
+                                            <label for="po-order-type" class="form-label mb-1 text-white">Order Type</label>
+                                            <select name="po-order-type" id="po-order-type" class="form-control mySelect">
+                                    <option value="1">Open Market</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="po-incoterm" class="form-label mb-1 text-white">Incoterm</label>
+                                            <select name="po-incoterm" id="po-incoterm" class="form-control mySelect">
+                                    <option value="1"></option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-20px">
+                                        <div class="col-6">
+                                            <label for="po-cargo-agency" class="form-label mb-1 text-white">Cargo Agency</label>
+                                            <select name="po-cargo-agency" id="po-cargo-agency" class="form-control mySelect">
+                                    <option value="1">All Countries</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="po-truck-company" class="form-label mb-1 text-white">Truck Company</label>
+                                            <select name="po-truck-company" id="po-truck-company" class="form-control mySelect">
+                                    <option value="1">3D Flower</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-20px">
+                                        <div class="col-4">
+                                            <div class="form-label mb-1 text-white">
+                                                <label for="date-po">Date PO</label>
+                                                <input type="text" id="date-po" class="datepicker">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-label mb-1 text-white">
+                                                <label for="date-fly">Date Fly</label>
+                                                <input type="text" id="date-fly" class="datepicker">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-label mb-1 text-white">
+                                                <label for="date-truck">Date Truck</label>
+                                                <input type="text" id="date-truck" class="datepicker">
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row mb-20px">
+                                        <div class="col-6">
+                                            <label for="po-price-sheet" class="form-label mb-1 text-white">Price Sheet</label>
+                                            <select name="po-price-sheet" id="po-price-sheet" class="form-control mySelect">
+                                    <option value="1">Coming</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="po-rep" class="form-label mb-1 text-white">Rep</label>
+                                            <select name="po-rep" id="po-rep" class="form-control mySelect">
+                                    <option value="1">Sales Rep</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-20px">
+                                        <label for="po-rep" class="form-label mb-1 text-white">Rep</label>
+                                        <div class="po-customer-detail p-3 d-flex gap-3 ">
+                                            <table class="table-borderless" width="100%">
+                                                <tr>
+                                                    <td width="50%">
+                                                        <table class="table-borderless" width="100%">
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div class="po-customerinfo-label label-dark">Customer</div>
+                                                                    <div class="po-customer-name text-gray">3D Flovers KZ</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="40%">
+                                                                    <div class="po-customerinfo-label label-dark">Term</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="po-customer-name text-gray">60 Days</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="po-customerinfo-label label-dark">Credit</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="po-customer-name text-gray">$6000</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="po-customerinfo-label label-dark">DaysLate</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="po-customer-name text-gray">0</div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                    <td width="50%">
+                                                        <table class="table-borderless" width="100%">
+                                                            <tr>
+                                                                <td colspan="2">
+                                                                    <div class="po-customerinfo-label label-dark">Shipping Address</div>
+                                                                    <div class="po-customer-name text-gray">Jose Gomezz E13-22 Quito ec</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="40%">
+                                                                    <div class="po-customerinfo-label label-dark">Market</div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="po-customer-name text-gray">Europa</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="po-customerinfo-label label-dark">CRM </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="po-customer-name"><a href="#">Click Here</a></div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mb-20px">
+                                        <div class="col-6">
+                                            <input type="button" value="CANCEL" class="btndarckbg d-flex align-items-center justify-content-around">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="button" value="SAVE" class="btn btn-primary celestehover">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Date time picker script -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="JS/pofunctions.js"></script>
+
+
+    <!-- script with example purpose only, do not copy -->
+    <script>
+        $(document).ready(function() {
+            var tableinventario = $(".table-inventory-body tbody").html();
+
+            function repeat(func, times) {
+                func();
+                times && --times && repeat(func, times);
+            }
+            repeat(function() {
+                $(".table-inventory-body").append(tableinventario);
+            }, 5);
+        });
+    </script>
+</body>
+
+</html>

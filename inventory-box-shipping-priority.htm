@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventory Shipping Priority</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="bootstrap-5.0.0-beta3/distt/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+    <!-- <script src="bootstrap-5.0.0-beta3/distt/js/bootstrap.bundle.min.js"></script> -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/inventory.css">
+
+
+    <script>
+        $(document).ready(function() {
+            $('.CustomersView').select2();
+
+            $('.mySelect').select2();
+            // function selecto(){
+            //     $('.mySelect').select2();
+            // }
+            // selecto();
+        });
+    </script>
+</head>
+
+<body class="gray-bg shipping-priority">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="navbar-default navbar-static-side" style="position: fixed;"></div>
+
+
+    <div id="page-wrapper" style="min-height: 100vh;">
+        <div class="navbar">
+
+        </div>
+
+        <div class="wrapper wrapper-content filtersDefault">
+            <div class="head-filters container-style">
+                <div class="title ttl-filter">
+                    <div class="ttl-onmobile">
+                        <p class="">Inventory shipping priority</p>
+                    </div>
+
+                    <div class="icons-nav">
+                        <a href="" class="home"><i></i> Home</a>
+                        <a href="" class="refresh"><i></i>Refresh</a>
+                    </div>
+                </div>
+
+
+                <div class="head-filters-container">
+                    <div class="filters">
+                        <div class="filter">
+                            <label for="filt-warehouse">Warehouse</label>
+                            <div class="selectcontainer fade show active" id="filt-warehouse-cont" role="tabpanel" aria-labelledby="">
+                                <select name="filt-warehouse" id="filt-warehouse" class="form-control mySelect">
+                                    <option value="1">AGR</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="result" class="result container-style">
+
+                <div class="table-result-boxpacking">
+                    <div class="tablhead-container">
+                        <table class="resulthead" cellpading="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th class="order">Order</th>
+                                    <th class="client">Client</th>
+                                    <th class="market">Market</th>
+                                    <th class="po">PO</th>
+                                    <th class="date">Date</th>
+                                    <th class="boxid">Box ID</th>
+                                    <th class="boxtype">Box Type</th>
+                                    <th class="counts">Count</th>
+                                    <th class="sku">SKU</th>
+                                    <th class="collapselink">&nbsp;</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="tabscroll">
+                        <table class="resultcontent " cellpading="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="order">D</td>
+                                    <td class="client">ROSALINDA SPA</td>
+                                    <td class="market">US ESTIMATES</td>
+                                    <td class="po">341730</td>
+                                    <td class="date">09/09/2021</td>
+                                    <td class="boxid">2710166</td>
+                                    <td class="boxtype">-</td>
+                                    <td class="counts">
+                                        <div class="count firtst">2</div>
+                                        <div class="collapse multi-collapse-1" id="countCollapse">
+                                            <div class="count firtst">1</div>
+                                            <div class="count firtst">2</div>
+                                            <div class="count firtst">2</div>
+                                            <div class="count firtst">2</div>
+                                            <div class="count firtst">2</div>
+                                            <div class="count firtst">2</div>
+                                            <div class="count firtst">2</div>
+                                            <div class="count firtst">3</div>
+                                            <div class="count firtst">1</div>
+                                            <div class="count firtst">3</div>
+                                            <div class="count firtst">3</div>
+                                            <div class="count firtst">3</div>
+                                            <div class="count firtst">2</div>
+                                        </div>
+
+
+                                    </td>
+                                    <td class="sku">
+                                        <div class="count firtst">ALS BELCANTO 70CM 10ST AG A</div>
+                                        <div class="collapse multi-collapse-1 " id="countCollapse">
+                                            <div class="count">ALS BELLA BLOSSOM 70CM 10ST AG A</div>
+                                            <div class="count">ALS BELLA ORANGE 70cm 10ST AG A</div>
+                                            <div class="count">ALS BELLA PINK 70cm 10ST AG A</div>
+                                            <div class="count">ALS BELLA PURPLE 70cm 10ST AG A</div>
+                                            <div class="count">ALS BELLA PURPLE WHITE 70cm 10ST AG A</div>
+                                            <div class="count">ALS BELLA STAR 70cm 10ST AG A</div>
+                                            <div class="count">ALS FROZEN 70CM 10ST AG A</div>
+                                            <div class="count">ALS LUCERO 70CM 10ST AG A</div>
+                                            <div class="count">ALS NIRVANA 70CM 10ST AG A</div>
+                                            <div class="count">ALS PRIMADONNA 70CM 10ST AG A</div>
+                                            <div class="count">ALS SINCLAR 70CM 10ST AG A</div>
+                                            <div class="count">ALS SUPER BELLA STAR 70CM 10ST AG A</div>
+                                            <div class="count">ALS SUPER BELLA WHITE 70CM 10ST AG A</div>
+                                        </div>
+                                    </td>
+                                    <td class="collapselink">
+                                        <button class="" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-1" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"><span class="count-total">14</span> View All</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="mob-table-container">
+                    <div class="conttablettl">
+                        <div class="table-ttl d-flex">
+
+                            <div class="ttl-qty">PO</div>
+                            <!-- <div class="ttl-id">BOX ID</div> -->
+                            <div class="ttl-name">CLIENT</div>
+                        </div>
+                    </div>
+                    <div class="data-table accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading-1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-1" aria-expanded="false" aria-controls="flush-collapse-1">
+                                        <div class="ttl-cstmr-qty">341730</div>
+                                        <!-- <div class="ttl-cstmr-id">2710166</div> -->
+                                        <div class="ttl-cstmr-name">ROSALINDA SPA</div>
+                                    </button>
+                            </h2>
+                            <div id="flush-collapse-1" class="accordion-collapse collapse show" aria-labelledby="flush-heading-1" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="fill-data">
+                                        <div class="table-data d-flex">
+                                            <div class="pro-info proboxid">
+                                                <div class="ttl">Box ID</div>
+                                                <div>2710166</div>
+                                            </div>
+                                            <div class="pro-info order">
+                                                <div class="ttl">Order</div>
+                                                <div>D</div>
+                                            </div>
+
+                                            <div class="pro-info market">
+                                                <div class="ttl">Market</div>
+                                                <div>UE Estimates</div>
+                                            </div>
+
+                                            <div class="pro-info date">
+                                                <div class="ttl">Date</div>
+                                                <div>09/09/2021</div>
+                                            </div>
+
+                                            <div class="pro-info boxtype">
+                                                <div class="ttl">Box Type</div>
+                                                <div>-</div>
+                                            </div>
+                                        </div>
+                                        <table class="counts-mob" cellpading="0" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="count">#</th>
+                                                    <th class="sku">SKU</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS BELCANTO 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">1</td>
+                                                    <td class="sku">ALS BELLA BLOSSOM 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS BELLA ORANGE 70cm 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS BELLA PINK 70cm 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS BELLA PURPLE 70cm 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS BELLA PURPLE WHITE 70cm 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS BELLA STAR 70cm 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS FROZEN 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">3</td>
+                                                    <td class="sku">ALS LUCERO 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">1</td>
+                                                    <td class="sku">ALS NIRVANA 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">3</td>
+                                                    <td class="sku">ALS PRIMADONNA 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">3</td>
+                                                    <td class="sku">ALS SINCLAR 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">3</td>
+                                                    <td class="sku">ALS SUPER BELLA STAR 70CM 10ST AG A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="count">2</td>
+                                                    <td class="sku">ALS SUPER BELLA WHITE 70CM 10ST AG A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-heading-2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-2" aria-expanded="false" aria-controls="flush-collapse-2">
+                                        <div class="ttl-cstmr-qty">2</div>
+                                        <div class="ttl-cstmr-name">3D FLOWERS KZ</div>
+                                    </button>
+                            </h2>
+                            <div id="flush-collapse-2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2" data-bs-parent="#accordionFlushExample">
+                                Data Here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="thisModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                    <button type="button" class="btn-close float-right" data-bs-dismiss="modal" aria-label="Close" style="width: 26px; height:26px; background: transparent;  border:0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22.007" height="22.007" viewBox="0 0 22.007 22.007">
+                                <path id="close_1_" data-name="close (1)"
+                                    d="M14.634,11,21.442,4.2a1.925,1.925,0,0,0,0-2.723L20.535.566a1.925,1.925,0,0,0-2.723,0L11,7.373,4.2.564a1.925,1.925,0,0,0-2.723,0l-.909.908a1.925,1.925,0,0,0,0,2.723L7.373,11,.566,17.812a1.925,1.925,0,0,0,0,2.723l.908.908a1.925,1.925,0,0,0,2.723,0L11,14.634l6.808,6.808a1.925,1.925,0,0,0,2.723,0l.908-.908a1.925,1.925,0,0,0,0-2.723Zm0,0"
+                                    fill="#fff" />
+                            </svg>
+                        </button>
+                </div>
+                <div class="modal-body d-flex">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        // function checkCollapseis() {
+        //     if ($("#filtersCollapse2").hasClass("show")) {
+        //         console.log("tiene la clase show");
+        //         $("#result").attr("style", "height: calc(100% - 136px);");
+        //     } else {
+        //         console.log("NOOOOO tiene la clase show");
+        //         $("#result").attr("style", "height: calc(100% - 91px);");
+        //     }
+        // }
+        // resultheight();
+
+
+        $(document).ready(function() {
+            if (window.innerWidth >= 1200) {
+                $("#filtersCollapse2").addClass("show");
+            } else if (window.innerWidth < 1200) {
+                // something
+            } else if (window.innerWidth > 993) {
+                console.log(window.innerWidth);
+                console.log("Desk");
+            } else {
+                console.log(window.innerWidth);
+                console.log("Mobi");
+
+                //class="content-filters filters collapse show"
+
+                // class="" id = "exampleModal" tabindex = "-1" aria - labelledby="exampleModalLabel" aria - hidden="true"
+
+            }
+
+
+
+
+            // $(".btn-search").click(function() {
+            //     $(".search-container .input-group").clone().appendTo("#thisModal .modal-body");
+            //     //$("#thisModal .modal-body").append($(".search-cont").html());
+            // });
+            // $(".btn-export").click(function() {
+            //     $(".export-table").clone().appendTo("#thisModal .modal-body");
+            // });
+
+
+            // $('#thisModal').on('hidden.bs.modal', function() {
+            //     $("#thisModal .modal-body").empty();
+            // });
+        });
+    </script>
+
+
+</body>
+
+</html>

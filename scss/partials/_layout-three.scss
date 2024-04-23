@@ -1,0 +1,542 @@
+    .layout-3 {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 10px 10px !important;
+        .panel .tab-pane {
+            overflow-y: auto;
+        }
+        .topfunctions {
+            padding: 10px;
+            label {
+                width: stretch;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .bottomfunctions {
+            padding: 10px;
+        }
+        .select2-container {
+            width: 100% !important;
+        }
+        .funcleft {
+            display: flex;
+            //width: 45%;
+            //padding: 0px 10px 10px;
+            .boxfunc-boxes {
+                width: 23%;
+            }
+            .boxfunc-location {
+                width: 40%;
+                // .select2-container{ width: 140px;}
+            }
+            .boxfunc-type {
+                width: 37%;
+            }
+        }
+        .funcright {
+            display: flex;
+            //width: 45%;
+            //padding: 0px 10px 10px;
+            .boxfunc-calctype {
+                width: 45%;
+            }
+            .boxfunc-avgstem {
+                width: 30%;
+            }
+            .boxfunc-boxprice {
+                width: 25%;
+            }
+        }
+        .packages-container {
+            height: calc(70% - 65px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 10px;
+            @include scrollbar-y;
+        }
+        .tab-content {
+            .packages-container {
+                background-color: var(--lightgray);
+            }
+        }
+        .panel {
+            //transition: width 0.2s;
+            .nav-tabs {
+                transition: display 0.2s;
+            }
+        }
+        .panel-invent {
+            width: calc(50% - 5px);
+            height: calc(100vh - 140px);
+            transition: width 0.2s;
+            margin-right: 10px !important;
+        }
+        .panel-box {
+            margin-bottom: 0;
+            width: calc(50% - 5px);
+            height: calc(100vh - 140px);
+            transition: width 0.2s;
+            margin-right: 0px;
+        }
+        .panel-packages {
+            position: absolute;
+            width: calc(100% - 20px);
+            height: 400px;
+            bottom: 10px;
+            background-color: var(--aqua);
+            transition: height 0.2s;
+            border-radius: 8px;
+            .btn-packages-fullpanel,
+            .expandcollapse {
+                background-color: var(--darkBlue);
+            }
+            .expandcollapse {
+                @include bg-svg-icohover(url('/images/poimages/ico-expand.svg'),
+                18px,
+                18px,
+                $bg-color: var(--darkBlue));
+            }
+            .panel-default {
+                @include bg-svg-icohover(url('/images/poimages/ico-collapse.svg'),
+                18px,
+                18px,
+                $bg-color: var(--darkBlue));
+            }
+        }
+        .panel-packages .navcontainer {
+            height: 69px;
+        }
+        .panel-packages .tab-pane,
+        .panel-packages .tab-content {
+            border-radius: 0 0 8px 8px !important;
+            height: calc(100% - 69px);
+        }
+        .this-expand {
+            width: calc(100% - 20px);
+            height: calc(100vh - 140px);
+            transition: width 0.2s;
+        }
+        .this-collapse {
+            width: 80px;
+            height: calc(100vh - 140px);
+            .nav-tabs {
+                //display: none;
+                transition: display 0.2s;
+            }
+            .no-layout2 {
+                display: none;
+            }
+            .minibox-container {
+                display: inherit;
+                width: 100%;
+                background-color: #fff;
+                border-radius: 8px;
+                height: calc(100% - 34px);
+                padding-top: 16px;
+                .label-pack {
+                    background-color: var(--aqua);
+                    border-radius: 4px;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                    padding: 2px;
+                }
+                .lbl-ttl {
+                    font-size: 9px;
+                    padding: 0 5px;
+                }
+                .box-info {
+                    font-size: 13px;
+                    font-weight: bold;
+                    margin-bottom: 7px;
+                    padding: 0 5px;
+                }
+            }
+            .box-summary {
+                display: block;
+                font-size: 11px;
+                color: #fff;
+                padding: 3px;
+                //width: 60px;
+                .status {
+                    width: 100%;
+                }
+            }
+            .packages-container {
+                padding: 4px;
+                height: calc(45% - 0px);
+                width: 100%;
+            }
+        }
+        .pack-collapse {
+            width: calc(100% - 20px);
+            height: 69px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            // Mini tabs
+            .mini-packages-container {
+                height: auto;
+                width: 50%;
+                padding: 0 10px 0 0;
+                align-items: center;
+                justify-content: space-between;
+                background: transparent;
+                .ico-package {
+                    margin: 0 0 0 15px;
+                }
+                .packages-container {
+                    height: 69px;
+                    width: calc(95% - 120px);
+                    padding: 2px 0 0;
+                    display: flex;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    @include scrollbar-x($bgcolor: #cacaca, $bradio: 8px);
+                    &::-webkit-scrollbar {
+                        border-radius: 8px;
+                    }
+                    .pckgs {
+                        display: flex;
+                    }
+                    .packagebox {
+                        font-size: 11px;
+                        color: #fff;
+                        padding: 3px;
+                        width: 100px;
+                        height: 53px;
+                        margin-bottom: 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        .status {
+                            width: auto;
+                        }
+                    }
+                }
+                .mini-ordertotal {
+                    width: 60px;
+                }
+            }
+            // END Mini tabs
+        }
+        .displayNone {
+            display: none;
+        }
+        .this-collapse {
+            .btn-control-filters,
+            #invent-filters,
+            .tab-content {
+                display: none;
+            }
+        }
+        #invent-filters {
+            //position: relative;
+            .filcont {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .invfil-farm,
+                .invfil-spec,
+                .invfil-variet,
+                .invfil-length,
+                .invfil-stems,
+                .invfil-pack,
+                .invfil-stag,
+                .invfil-colors,
+                .invfil-cat {
+                    width: 30%;
+                }
+            }
+        }
+        .topfunctions {
+            min-height: 60px;
+            .select2-container {
+                width: 100% !important;
+            }
+            .funcleft {
+                width: 50%;
+            }
+            .funcright {
+                width: 50%;
+            }
+        }
+        .table-head {
+            white-space: inherit;
+        }
+        .table-body {
+            height: calc(100% - 75px);
+        }
+        .bottomfunctions {
+            flex-direction: column;
+            height: 123px;
+            //padding: 10px 0px 0;
+            .funcleft {
+                width: 100%;
+                flex-direction: row;
+                .textareacont {
+                    width: 100%;
+                    justify-content: space-between;
+                    //display: flex;
+                    margin-bottom: 20px;
+                    //height: 50%;
+                    textarea {
+                        width: 49%;
+                    }
+                    #message-toharvest {
+                        float: right;
+                    }
+                }
+            }
+            .funcright {
+                width: 100%;
+                padding: 0px 10px;
+            }
+        }
+        .panel-invent .tab-pane,
+        .panel-box .box-tablecontainer {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            @include scrollbar-x;
+        }
+        .box-tablecontainer {
+            height: calc(70% - 60px);
+        }
+        // .bottomfunctions {
+        //     height: 30%;
+        // }
+        .table-inventory-head,
+        .table-inventory-body {
+            min-width: 800px;
+            width: 100%;
+        }
+        .table-box-head,
+        .table-box-body,
+        .table-box-summary {
+            min-width: 1080px;
+            width: 100%;
+        }
+        .top-actions {
+            display: none;
+        }
+        .po-summary .top-actions {
+            display: inherit;
+        }
+        .expanded-packages {
+            box-shadow: 0px 0px 20px var(--darkGray);
+            .tab-content {
+                display: flex !important;
+                justify-content: space-between;
+                flex-direction: row;
+                height: calc(100% - 69px);
+                .packages-container {
+                    width: 63%;
+                    padding: 15px 10px 10px;
+                    height: auto;
+                    border-bottom-left-radius: 8px;
+                    overflow-y: scroll;
+                    background-color: var(--lightgray);
+                    @include scrollbar-y;
+                    .pckgs {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+                }
+                .po-summary {
+                    max-width: initial;
+                    width: 35%;
+                }
+            }
+        }
+        .packages-container {
+            flex-wrap: wrap;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 20px;
+            .packagebox {
+                width: 49%;
+            }
+        }
+        .pack-collapse {
+            .packages-container {
+                display: none;
+            }
+        }
+        .full-panel-packages {
+            height: calc(100% - 60px);
+            .expandcollapse {
+                display: none;
+            }
+            .btn-packages-fullpanel {
+                margin-right: 15px;
+            }
+            .packages-container {
+                width: 100%;
+                // .packagebox {
+                //     width: 32%;
+                // }
+            }
+            // .po-summary {
+            //     max-width: inherit;
+            //     display: flex;
+            //     flex-wrap: wrap;
+            //     justify-content: space-between;
+            //     width: 80%;
+            //     .top-actions {
+            //         width: 100%;
+            //         align-items: flex-start;
+            //         gap: 15px;
+            //     }
+            //     h5,
+            //     .totals-container,
+            //     textarea {
+            //         width: 48%;
+            //     }
+            // }
+            .tab-content {
+                display: flex !important;
+                justify-content: space-between;
+                flex-direction: row;
+                height: calc(100% - 69px);
+                .packages-container {
+                    width: 63%;
+                    padding: 15px 10px 10px;
+                    height: auto;
+                    border-bottom-left-radius: 8px;
+                    overflow-y: scroll;
+                    background-color: var(--lightgray);
+                    @include scrollbar-y;
+                    .pckgs {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+                }
+                .po-summary {
+                    max-width: initial;
+                    width: 35%;
+                }
+            }
+        }
+        /////////// Nav Pricing ///////////
+        #nav-pricing {
+            .box-tablecontainer {
+                height: calc(70% - 65px) !important;
+            }
+        }
+        #nav-pricing {
+            .topsection {
+                height: 65px;
+                padding: 0 10px;
+            }
+            .bottom-actions {
+                display: flex;
+                flex-direction: column-reverse;
+                padding-top: 10px;
+                .links {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    a {
+                        font-size: 12px;
+                        width: 130px;
+                        display: block;
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        /////////// Nav UPC ///////////
+        #nav-upc {
+            .box-tablecontainer {
+                height: calc(70% - 65px);
+                width: 100%;
+                //min-width: 1200px;
+            }
+            .topsection {
+                padding: 0 10px;
+            }
+            .table-upc-head {
+                width: 100%;
+                min-width: 1000px;
+                td {
+                    white-space: break-spaces;
+                    text-overflow: inherit;
+                }
+            }
+            .table-upc-body {
+                width: 100%;
+                min-width: 1000px;
+                height: calc(100% - 24px) !important;
+                td {
+                    .inputintable {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        /////////// Nav EXTRAS ///////////
+        #nav-extras {
+            .box-tablecontainer {
+                height: calc(70% - 65px);
+                width: 100%;
+                //min-width: 1200px;
+            }
+            .topsection {
+                padding: 0 10px;
+            }
+            .table-extra-head {
+                width: 100%;
+                min-width: 600px;
+                td {
+                    white-space: break-spaces;
+                    text-overflow: inherit;
+                }
+            }
+            .table-extra-body {
+                width: 100%;
+                min-width: 600px;
+                height: calc(100% - 70px) !important;
+                td {
+                    .inputintable {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        /////////// Nav fees ///////////
+        #nav-fees {
+            .topsection {
+                padding: 0 10px;
+            }
+            .box-tablecontainer {
+                height: calc(100% - 220px);
+            }
+            .table-fees-head {
+                width: 100%;
+                min-width: 600px;
+                td {
+                    white-space: break-spaces;
+                    text-overflow: inherit;
+                }
+            }
+            .table-fees-body {
+                width: 100%;
+                min-width: 600px;
+                height: calc(100% - 24px);
+                td {
+                    .inputintable {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }

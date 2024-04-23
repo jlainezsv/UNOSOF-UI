@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>S1 - PRE-FRIO RECEIVING</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="bootstrap-5.0.0-beta3/distt/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+    <!-- <script src="bootstrap-5.0.0-beta3/distt/js/bootstrap.bundle.min.js"></script> -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/inventory.css">
+
+
+    <script>
+        $(document).ready(function() {
+            $('.CustomersView').select2();
+
+            $('.mySelect').select2();
+            // function selecto(){
+            //     $('.mySelect').select2();
+            // }
+            // selecto();
+        });
+    </script>
+</head>
+
+<body class="gray-bg inventory-receiving">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="navbar-default navbar-static-side" style="position: fixed;"></div>
+
+
+    <div id="page-wrapper" style="min-height: 100vh;">
+        <div class="navbar">
+
+        </div>
+
+        <div class="wrapper wrapper-content filtersDefault">
+            <div class="head-filters container-style">
+                <div class="title ttl-filter">
+                    <div class="ttl-onmobile">
+                        <p class="">S1 - PRE-FRIO RECEIVING</p>
+                    </div>
+                </div>
+
+
+                <div class="head-filters-container">
+                    <div class="filters">
+                        <div class="warehouse">
+                            <label for="filt-warehouse"></label>
+                            <div class="selectcontainer fade show active" id="filt-warehouse-cont" role="tabpanel" aria-labelledby="">
+                                <select name="filt-warehouse" id="filt-warehouse" class="form-control mySelect">
+                                    <option value="1">Select Warehouse</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="result" class="result container-style">
+                <div class="mycontainer">
+                    <div class="col-malla">
+                        <div class="title">
+                            <p class="">MALLAS</p>
+                        </div>
+                        <div class="barcodes tabscroll">
+                        </div>
+                    </div>
+                    <div class="col-blocks-container">
+                        <div class="col-blocks-inputs">
+                            <div class="inputs">
+                                <div class="input-container">
+                                    <label for="filt-blocks">Blocks</label>
+                                    <div class="selectcontainer fade show active" id="filt-blocks-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-blocks" id="filt-blocks" class="form-control mySelect">
+                                    <option value="1">2</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <label for="filt-variety">Variety</label>
+                                    <div class="selectcontainer fade show active" id="filt-variety-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-variety" id="filt-variety" class="form-control mySelect">
+                                    <option value="1">Free Spirit</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <label for="filt-cutter">Cutter</label>
+                                    <div class="selectcontainer fade show active" id="filt-cutter-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-cutter" id="filt-cutter" class="form-control mySelect">
+                                    <option value="1">PULLOQUINGA PALOMO ALEXIS FERNANDO</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-container half">
+                                    <label for="filt-cutstage">Cut Stage</label>
+                                    <div class="selectcontainer fade show active" id="filt-cutstage-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-cutstage" id="filt-cutstage" class="form-control mySelect">
+                                    <option value="1">RUSO</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-container half">
+                                    <label for="filt-info">INFO</label>
+                                    <div class="selectcontainer fade show active" id="filt-info-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-info" id="filt-info" class="form-control mySelect">
+                                    <option value="1"></option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inputs">
+                                <div class="input-container">
+                                    <label for="filt-numallas">Number of Mallas</label>
+                                    <div class="selectcontainer fade show active" id="filt-numallas-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-numallas" id="filt-numallas" class="form-control mySelect">
+                                            <option value="1">2</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-container">
+                                    <label for="filt-stemsmallas">STEMS Per Mallas</label>
+                                    <div class="selectcontainer fade show active" id="filt-stemsmallas-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-stemsmallas" id="filt-stemsmallas" class="form-control mySelect">
+                                            <option value="1">Free Spirit</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-container">
+                                    <label for="filt-mallasize">Malla Size</label>
+                                    <div class="selectcontainer fade show active" id="filt-mallasize-cont" role="tabpanel" aria-labelledby="">
+                                        <select name="filt-mallasize" id="filt-mallasize" class="form-control mySelect">
+                                            <option value="1">Small</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input-container half">
+                                    <label>&nbsp;</label>
+                                    <button class="btn btn-cancel" value="CLEAR">CLEAR</button>
+                                </div>
+                                <div class="input-container half">
+                                    <label>&nbsp;</label>
+                                    <button class="btn btn-save" value="SAVE">SAVE</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-blocks-summary">
+                            <div class="summary">
+                                <div class="summary-data">
+                                    <div class="data-container">
+                                        <div>BLOCKS</div>
+                                        <input type="text" readonly value="02">
+                                    </div>
+                                    <div class="data-container">
+                                        <div>COLOUR</div>
+                                        <input type="text" readonly value="ROSES">
+                                    </div>
+                                    <div class="data-container">
+                                        <div>VARIETY</div>
+                                        <input type="text" readonly value="FREE SPIRITY">
+                                    </div>
+                                    <div class="data-container">
+                                        <div>CUT STAGE</div>
+                                        <input type="text" readonly value="RUSO">
+                                    </div>
+                                    <div class="data-container">
+                                        <div>MALLAS</div>
+                                        <input type="text" readonly value="02">
+                                    </div>
+                                    <div class="data-container">
+                                        <div>STEMS</div>
+                                        <input type="text" readonly value="60">
+                                    </div>
+                                </div>
+                                <div class="image">
+                                    <span class="default">NO IMAGE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="thisModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                    <button type="button" class="btn-close float-right" data-bs-dismiss="modal" aria-label="Close" style="width: 26px; height:26px; background: transparent;  border:0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22.007" height="22.007" viewBox="0 0 22.007 22.007">
+                                <path id="close_1_" data-name="close (1)"
+                                    d="M14.634,11,21.442,4.2a1.925,1.925,0,0,0,0-2.723L20.535.566a1.925,1.925,0,0,0-2.723,0L11,7.373,4.2.564a1.925,1.925,0,0,0-2.723,0l-.909.908a1.925,1.925,0,0,0,0,2.723L7.373,11,.566,17.812a1.925,1.925,0,0,0,0,2.723l.908.908a1.925,1.925,0,0,0,2.723,0L11,14.634l6.808,6.808a1.925,1.925,0,0,0,2.723,0l.908-.908a1.925,1.925,0,0,0,0-2.723Zm0,0"
+                                    fill="#fff" />
+                            </svg>
+                        </button>
+                </div>
+                <div class="modal-body d-flex">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        // function checkCollapseis() {
+        //     if ($("#filtersCollapse2").hasClass("show")) {
+        //         console.log("tiene la clase show");
+        //         $("#result").attr("style", "height: calc(100% - 136px);");
+        //     } else {
+        //         console.log("NOOOOO tiene la clase show");
+        //         $("#result").attr("style", "height: calc(100% - 91px);");
+        //     }
+        // }
+        // resultheight();
+
+
+        $(document).ready(function() {
+            if (window.innerWidth >= 1200) {
+                $("#filtersCollapse2").addClass("show");
+            } else if (window.innerWidth < 1200) {
+                // something
+            } else if (window.innerWidth > 993) {
+                console.log(window.innerWidth);
+                console.log("Desk");
+            } else {
+                console.log(window.innerWidth);
+                console.log("Mobi");
+
+                //class="content-filters filters collapse show"
+
+                // class="" id = "exampleModal" tabindex = "-1" aria - labelledby="exampleModalLabel" aria - hidden="true"
+
+            }
+
+
+
+
+            // $(".btn-search").click(function() {
+            //     $(".search-container .input-group").clone().appendTo("#thisModal .modal-body");
+            //     //$("#thisModal .modal-body").append($(".search-cont").html());
+            // });
+            // $(".btn-export").click(function() {
+            //     $(".export-table").clone().appendTo("#thisModal .modal-body");
+            // });
+
+
+            // $('#thisModal').on('hidden.bs.modal', function() {
+            //     $("#thisModal .modal-body").empty();
+            // });
+        });
+    </script>
+
+
+</body>
+
+</html>

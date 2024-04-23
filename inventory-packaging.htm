@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Manage Customers</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="bootstrap-5.0.0-beta3/distt/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+    <!-- <script src="bootstrap-5.0.0-beta3/distt/js/bootstrap.bundle.min.js"></script> -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/inventory.css">
+
+
+    <script>
+        $(document).ready(function() {
+            $('.CustomersView').select2();
+
+            $('.mySelect').select2();
+            // function selecto(){
+            //     $('.mySelect').select2();
+            // }
+            // selecto();
+        });
+    </script>
+</head>
+
+<body class="gray-bg">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="navbar-default navbar-static-side" style="position: fixed;"></div>
+
+
+    <div id="page-wrapper" style="min-height: 100vh;">
+        <div class="navbar">
+
+        </div>
+
+        <div class="wrapper wrapper-content inventory-packaging">
+            <div class="inventory-container container-style">
+                <div class="filters-container">
+                    <div class="title ttl-filter">
+                        <p class="">Inventory packaging</p>
+
+                        <a class="filters-mob d-xl-none d-xxl-none" data-bs-toggle="collapse" href="#filtersCollapse" role="button" aria-expanded="false" aria-controls="filtersCollapse"></a>
+                    </div>
+                    <div id="filtersCollapse" class="collapse">
+                        <div class="warehouse">
+                            <div class="filters-left">
+                                <div class="full-filter">
+                                    <label for="production-warehouse">Poscosecha</label>
+                                    <div class="selectcontainer fade show active" id="production-warehouse-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="production-warehouse" id="production-warehouse" class="form-control mySelect">
+                                    <option value="1">Select Production Warehouse</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filters-right">
+                                <div class="full-filter">
+                                    <label for="process-warehouse">&nbsp;</label>
+                                    <div class="selectcontainer fade show active" id="process-warehouse-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="process-warehouse" id="process-warehouse" class="form-control mySelect">
+                                        <option value="1">Select Process Warehouse</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                    </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="id">ID: 44448888</p>
+                        <div class="filters">
+                            <div class="filters-left">
+
+                                <div class="half-filter">
+                                    <label for="filt-modifier">Modifier</label>
+                                    <div class="selectcontainer fade show active" id="filt-modifier-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-modifier" id="filt-modifier" class="form-control mySelect">
+                                    <option value="1">Time Good</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filter-date">Fecha</label>
+                                    <input type="text" name="filter-date" class="" placeholder="MM/DD/YYYY">
+                                </div>
+
+                                <div class="full-filter">
+                                    <label for="filter-producto">Producto</label>
+                                    <div class="selectcontainer fade show active" id="filter-producto-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filter-producto" id="filter-producto" class="form-control mySelect">
+                                        <option value="1">Select Process Warehouse</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                    </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-especies">Especies</label>
+                                    <div class="selectcontainer fade show active" id="filt-especies-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-especies" id="filt-especies" class="form-control mySelect">
+                                    <option value="1">Roses</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-variedad">Variedad</label>
+                                    <div class="selectcontainer fade show active" id="filt-variedad-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-variedad" id="filt-variedad" class="form-control mySelect">
+                                    <option value="1">Absurda</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-cut">CUT Point</label>
+                                    <div class="selectcontainer fade show active" id="filt-cutpoint-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-cutpoint" id="filt-cutpoint" class="form-control mySelect">
+                                    <option value="1">Absurda</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-package">Package</label>
+                                    <div class="selectcontainer fade show active" id="filt-package-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-package" id="filt-package" class="form-control mySelect">
+                                    <option value="1">Absurda</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="filters-right">
+                                <div class="half-filter">
+                                    <label for="filt-largo">Largo</label>
+                                    <div class="selectcontainer fade show active" id="filt-largo-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-largo" id="filt-largo" class="form-control mySelect">
+                                    <option value="1">Todos</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-tallos">Tallos</label>
+                                    <div class="selectcontainer fade show active" id="filt-tallos-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-tallos" id="filt-tallos" class="form-control mySelect">
+                                    <option value="1">220</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="quarter">
+                                    <div class="half-filter">
+                                        <label for="filt-orglargo">ORG Largo</label>
+                                        <div class="selectcontainer fade show active" id="filt-orglargo-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                            <select name="filt-orglargo" id="filt-orglargo" class="form-control mySelect">
+                                    <option value="1">150</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="half-filter">
+                                        <label for="filt-mesa">Mesa</label>
+                                        <div class="selectcontainer fade show active" id="filt-mesa-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                            <select name="filt-mesa" id="filt-mesa" class="form-control mySelect">
+                                    <option value="1">100</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-downgrade">Downgrade</label>
+                                    <div class="selectcontainer fade show active" id="filt-downgrade-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-downgrade" id="filt-downgrade" class="form-control mySelect">
+                                    <option value="1">Ventas</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-clasificadora">Clasificadora</label>
+                                    <div class="selectcontainer fade show active" id="filt-clasificadora-cont" role="tabpanel" aria-labelledby="inventfilter-farm">
+                                        <select name="filt-clasificadora" id="filt-clasificadora" class="form-control mySelect">
+                                    <option value="1">8251</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label for="filt-clasificadora">Quantity</label>
+
+                                    <div class="morelesscontainer fade show active" id="boxfunc-location" role="tabpanel" aria-labelledby="boxfunc-location">
+                                        <div id="" class="minus" onclick="less('stems');"></div>
+                                        <input id="" type="text" value="1" class="qty">
+                                        <div id="" class="add" onclick="add('stems');"></div>
+                                    </div>
+                                </div>
+
+                                <div class="half-filter">
+                                    <label>&nbsp;</label>
+                                    <button class="btn btn-cancel" value="CLEAR">CLEAR</button>
+                                </div>
+                                <div class="half-filter">
+                                    <label>&nbsp;</label>
+                                    <button class="btn btn-save" value="SAVE">SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableresult-container">
+                    <p class="title">Prioridad</p>
+
+                    <table class="table table-inventory-head table-head sticky-head tabscroll">
+
+                        <tbody>
+                            <tr>
+                                <td class="inv-product">Product</td>
+                                <td class="inv-qty text-center">4</td>
+                                <td class="inv-qty text-center">3</td>
+                                <td class="inv-qty text-center">2</td>
+                                <td class="inv-qty text-center">1</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-hover table-striped table-inventory-body table-body tabscroll border-bl-r">
+                        <tbody>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+
+                            <tr>
+                                <td class="inv-product">ABSURDA 40CM 25ST AG A</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center redcolor">-2</td>
+                                <td class="inv-qty text-center">0</td>
+                                <td class="inv-qty text-center">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="barcode-container container-style">
+                <p class="title">Barcodes</p>
+                <div class="barcodes tabscroll">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="thisModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                    <button type="button" class="btn-close float-right" data-bs-dismiss="modal" aria-label="Close" style="width: 26px; height:26px; background: transparent;  border:0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22.007" height="22.007" viewBox="0 0 22.007 22.007">
+                                <path id="close_1_" data-name="close (1)"
+                                    d="M14.634,11,21.442,4.2a1.925,1.925,0,0,0,0-2.723L20.535.566a1.925,1.925,0,0,0-2.723,0L11,7.373,4.2.564a1.925,1.925,0,0,0-2.723,0l-.909.908a1.925,1.925,0,0,0,0,2.723L7.373,11,.566,17.812a1.925,1.925,0,0,0,0,2.723l.908.908a1.925,1.925,0,0,0,2.723,0L11,14.634l6.808,6.808a1.925,1.925,0,0,0,2.723,0l.908-.908a1.925,1.925,0,0,0,0-2.723Zm0,0"
+                                    fill="#fff" />
+                            </svg>
+                        </button>
+                </div>
+                <div class="modal-body d-flex">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+
+            if (window.innerWidth >= 1200) {
+                $("#filtersCollapse").addClass("show");
+            } else if (window.innerWidth > 993) {
+                console.log(window.innerWidth);
+                console.log("Desk");
+            } else {
+                console.log(window.innerWidth);
+                console.log("Mobi");
+
+                //class="content-filters filters collapse show"
+
+                // class="" id = "exampleModal" tabindex = "-1" aria - labelledby="exampleModalLabel" aria - hidden="true"
+
+            }
+
+            $(".btn-search").click(function() {
+                $(".search-container .input-group").clone().appendTo("#thisModal .modal-body");
+                //$("#thisModal .modal-body").append($(".search-cont").html());
+            });
+            $(".btn-export").click(function() {
+                $(".export-table").clone().appendTo("#thisModal .modal-body");
+            });
+
+
+            $('#thisModal').on('hidden.bs.modal', function() {
+                $("#thisModal .modal-body").empty();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

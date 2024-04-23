@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOX PACKING / SHIPPING</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="bootstrap-5.0.0-beta3/distt/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+    <!-- <script src="bootstrap-5.0.0-beta3/distt/js/bootstrap.bundle.min.js"></script> -->
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet" href="css/inventory.css">
+
+
+    <script>
+        $(document).ready(function() {
+            $('.CustomersView').select2();
+
+            $('.mySelect').select2();
+            // function selecto(){
+            //     $('.mySelect').select2();
+            // }
+            // selecto();
+        });
+    </script>
+</head>
+
+<body class="gray-bg box-packing">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="navbar-default navbar-static-side" style="position: fixed;"></div>
+
+
+    <div id="page-wrapper" style="min-height: 100vh;">
+        <div class="navbar">
+
+        </div>
+
+        <div class="wrapper wrapper-content filtersDefault">
+            <div class="head-filters container-style">
+                <div class="title ttl-filter">
+                    <div class="ttl-onmobile">
+                        <p class="">S3 - BOX PACKING / SHIPPING</p>
+                        <a class="filtersmob" data-bs-toggle="collapse" onclick="resultheight()" href="#filtersCollapse2" role="button" aria-expanded="false" aria-controls="filtersCollapse"><i></i></a>
+                    </div>
+
+                    <div class="icons-nav">
+                        <a href="" class="home"><i></i> Home</a>
+
+                        <div class="dropdown">
+                            <a class="printMobile dropdown-toggle" href="#" role="button" id="printOptions" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i></i>
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="printOptions">
+                                <li><a class="dropdown-item" href="#">Boxes</a></li>
+                                <li><a class="dropdown-item" href="#">Mass Print</a></li>
+                            </ul>
+                        </div>
+
+
+                        <a href="" class="boxes"><i></i>Boxes</a>
+                        <a href="" class="massprint"><i></i>Mass Print</a>
+                        <a href="" class="scangroup"><i></i>Scan Group</a>
+                        <a href="" class="box"><i></i>Box</a>
+                        <a href="" class="weight"><i></i>Weight</a>
+                        <a href="" class="search active"><i></i>Search</a>
+                        <a class="filtersmob" data-bs-toggle="collapse" onclick="resultheight()" href="#filtersCollapse2" role="button" aria-expanded="false" aria-controls="filtersCollapse"><i></i></a>
+                    </div>
+                </div>
+
+
+                <div class="head-filters-container">
+                    <div class="filters">
+                        <div id="filtersCollapse2" class="collapse">
+                            <div class="filtersrow">
+                                <div class="mainfilters">
+
+                                    <div class="filter">
+                                        <label for="filt-warehouse">Warehouse</label>
+                                        <div class="selectcontainer fade show active" id="filt-warehouse-cont" role="tabpanel" aria-labelledby="">
+                                            <select name="filt-warehouse" id="filt-warehouse" class="form-control mySelect">
+                                    <option value="1">Select Warehouse</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-po">PO</label>
+                                        <div class="selectcontainer fade show active" id="filt-po-cont" role="tabpanel" aria-labelledby="">
+                                            <input type="text" name="filter-po" class="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-date">Fecha</label>
+                                        <div class="selectcontainer fade show active" id="filt-date-cont" role="tabpanel" aria-labelledby="">
+                                            <input type="text" name="filter-date" class="" placeholder="MM/DD/YYYY">
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-client">Clientes</label>
+                                        <div class="selectcontainer fade show active" id="filt-client-cont" role="tabpanel" aria-labelledby="">
+                                            <select name="filt-client" id="filt-client" class="form-control mySelect">
+                                    <option value="1">Todos</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapsedfilters">
+                                    <div class="filter">
+                                        <label for="filt-box">Box</label>
+                                        <div class="selectcontainer fade show active" id="filt-box-cont" role="tabpanel" aria-labelledby="">
+                                            <select name="filt-box" id="filt-box" class="form-control mySelect">
+                                    <option value="1">All</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-caja">Caja</label>
+                                        <div class="selectcontainer fade show active" id="filt-caja-cont" role="tabpanel" aria-labelledby="">
+                                            <input type="text" name="filter-caja" class="" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-packstatus">Packing Status</label>
+                                        <div class="selectcontainer fade show active" id="filt-packstatus-cont" role="tabpanel" aria-labelledby="">
+                                            <select name="filt-packstatus" id="filt-packstatus" class="form-control mySelect">
+                                    <option value="1">Open</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-cargo">Cargo</label>
+                                        <div class="selectcontainer fade show active" id="filt-cargo-cont" role="tabpanel" aria-labelledby="">
+                                            <select name="filt-cargo" id="filt-cargo" class="form-control mySelect">
+                                    <option value="1">All</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <label for="filt-species">Species</label>
+                                        <div class="selectcontainer fade show active" id="filt-species-cont" role="tabpanel" aria-labelledby="">
+                                            <select name="filt-species" id="filt-species" class="form-control mySelect">
+                                    <option value="1">All</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="btnsearch">
+                                <label>&nbsp;</label>
+                                <button class="btn btn-save" value="Search">Search</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="head-filter-actions">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="result" class="result container-style">
+                <div class="searchbar">
+                    <input type="text" class="search-icon" placeholder="Search">
+                    <div class="totalresult">Showing 1 to 10 of 60 entries</div>
+                </div>
+
+                <div class="table-result-boxpacking">
+                    <table class="resulthead" cellpading="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="id">ID</th>
+                                <th class="client">Cliente</th>
+                                <th class="client-send">Cliente Envio</th>
+                                <th class="rep">Rep</th>
+                                <th class="aging">AGING?</th>
+                                <th class="sent">Enviado</th>
+                                <th class="confirmed">Confirmed</th>
+                                <th class="cajas">Cajas</th>
+                                <th class="date">Fecha</th>
+                                <th class="print">Imprimir</th>
+                                <th class="awb-stickers">AWB/Stickers</th>
+                                <th class="ph-stickers">PH/Stickers</th>
+                                <th class="print-top">Print Top</th>
+                                <th class="agenc">Agenc.</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="resultcontent tabscroll" cellpading="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td class="id">-</td>
+                                <td class="client">-</td>
+                                <td class="client-send">-</td>
+                                <td class="rep">-</td>
+                                <td class="aging">-</td>
+                                <td class="sent">-</td>
+                                <td class="confirmed">-</td>
+                                <td class="cajas">-</td>
+                                <td class="date">-</td>
+                                <td class="print">-</td>
+                                <td class="awb-stickers">-</td>
+                                <td class="ph-stickers">-</td>
+                                <td class="print-top">-</td>
+                                <td class="agenc">-</td>
+                            </tr>
+                            <tr>
+                                <td class="id">-</td>
+                                <td class="client">-</td>
+                                <td class="client-send">-</td>
+                                <td class="rep">-</td>
+                                <td class="aging">-</td>
+                                <td class="sent">-</td>
+                                <td class="confirmed">-</td>
+                                <td class="cajas">-</td>
+                                <td class="date">-</td>
+                                <td class="print">-</td>
+                                <td class="awb-stickers">-</td>
+                                <td class="ph-stickers">-</td>
+                                <td class="print-top">-</td>
+                                <td class="agenc">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="totals" cellpading="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="id"></th>
+                                <th class="client"></th>
+                                <th class="total ">Total Shipped / packed</th>
+                                <th class="sent">0</th>
+                                <th class="confirmed">0</th>
+                                <th class="cajas">0</th>
+                                <th class="date"></th>
+                                <th class="print"></th>
+                                <th class="awb-stickers"></th>
+                                <th class="ph-stickers"></th>
+                                <th class="print-top"></th>
+                                <th class="agenc"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="totalresult d-flex justify-content-center mb-3">Showing 1 to 10 of 60 entries</div>
+                <div class="d-flex justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="thisModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" style="width: 100%;">
+                    <button type="button" class="btn-close float-right" data-bs-dismiss="modal" aria-label="Close" style="width: 26px; height:26px; background: transparent;  border:0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22.007" height="22.007" viewBox="0 0 22.007 22.007">
+                                <path id="close_1_" data-name="close (1)"
+                                    d="M14.634,11,21.442,4.2a1.925,1.925,0,0,0,0-2.723L20.535.566a1.925,1.925,0,0,0-2.723,0L11,7.373,4.2.564a1.925,1.925,0,0,0-2.723,0l-.909.908a1.925,1.925,0,0,0,0,2.723L7.373,11,.566,17.812a1.925,1.925,0,0,0,0,2.723l.908.908a1.925,1.925,0,0,0,2.723,0L11,14.634l6.808,6.808a1.925,1.925,0,0,0,2.723,0l.908-.908a1.925,1.925,0,0,0,0-2.723Zm0,0"
+                                    fill="#fff" />
+                            </svg>
+                        </button>
+                </div>
+                <div class="modal-body d-flex">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        function resultheight() {
+            if ($(".wrapper-content").hasClass("filtersCollapsed")) {
+                $("#result").attr("style", "height: calc(100% - 165px);");
+                $(".wrapper-content").removeClass("filtersCollapsed").addClass("filtersDefault");
+            } else {
+                $("#result").attr("style", "height: calc(100% - 100px);");
+                $(".wrapper-content").removeClass("filtersDefault").addClass("filtersCollapsed");
+            }
+
+        }
+
+        // function checkCollapseis() {
+        //     if ($("#filtersCollapse2").hasClass("show")) {
+        //         console.log("tiene la clase show");
+        //         $("#result").attr("style", "height: calc(100% - 136px);");
+        //     } else {
+        //         console.log("NOOOOO tiene la clase show");
+        //         $("#result").attr("style", "height: calc(100% - 91px);");
+        //     }
+        // }
+        // resultheight();
+
+
+        $(document).ready(function() {
+            if (window.innerWidth >= 1200) {
+                $("#filtersCollapse2").addClass("show");
+                $(".wrapper-content").removeClass("filtersCollapsed").addClass("filtersDefault");
+            } else if (window.innerWidth < 1200) {
+                $(".wrapper-content").removeClass("filtersDefault").addClass("filtersCollapsed");
+            } else if (window.innerWidth > 993) {
+                console.log(window.innerWidth);
+                console.log("Desk");
+            } else {
+                console.log(window.innerWidth);
+                console.log("Mobi");
+
+                //class="content-filters filters collapse show"
+
+                // class="" id = "exampleModal" tabindex = "-1" aria - labelledby="exampleModalLabel" aria - hidden="true"
+
+            }
+
+
+
+
+            // $(".btn-search").click(function() {
+            //     $(".search-container .input-group").clone().appendTo("#thisModal .modal-body");
+            //     //$("#thisModal .modal-body").append($(".search-cont").html());
+            // });
+            // $(".btn-export").click(function() {
+            //     $(".export-table").clone().appendTo("#thisModal .modal-body");
+            // });
+
+
+            // $('#thisModal').on('hidden.bs.modal', function() {
+            //     $("#thisModal .modal-body").empty();
+            // });
+        });
+    </script>
+
+
+</body>
+
+</html>

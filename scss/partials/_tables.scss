@@ -1,0 +1,397 @@
+// Tables
+.table-striped>tbody>tr:nth-of-type(odd) {
+    --bs-table-accent-bg: var(--po-tablestripe);
+    color: var(--bs-table-striped-color);
+}
+
+.table-hover>tbody>tr:hover,
+.table-hover>tbody>tr:hover th,
+.table-hover>tbody>tr:hover td,
+.table-hover>tbody>tr:hover {
+    background-color: var(--po-tablehover);
+    transition: background-color 0.2s;
+    // --bs-table-accent-bg: none;
+    // color: var(--bs-table-hover-color);
+    // transition: background-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    // td {
+    //     background-color: var(--po-tablehover);
+    // }
+    .clr-green {
+        background-color: rgba(142, 255, 155, 0.4);
+        --bs-table-accent-bg: rgba(142, 255, 155, 0.4);
+        ;
+    }
+    .clr-yellow {
+        background-color: rgba(255, 204, 102, 0.4);
+        --bs-table-accent-bg: rgba(255, 204, 102, 0.4);
+    }
+    .clr-lightpink {
+        background-color: rgba(255, 184, 168, 0.4);
+        --bs-table-accent-bg: rgba(255, 184, 168, 0.4);
+    }
+    .clr-pink {
+        background-color: rgba(255, 161, 140, 0.4);
+        --bs-table-accent-bg: rgba(255, 161, 140, 0.4);
+    }
+}
+
+.table-head {
+    color: var(--darkBlue);
+    font-size: 11px;
+    white-space: nowrap;
+    background-color: var(--po-tablehead);
+    margin-bottom: 0px;
+    tbody {
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+    }
+    tr {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .search-icon {
+        width: 70%;
+        margin-left: 10px;
+        max-width: 240px;
+    }
+    td {
+        padding: 4px;
+        vertical-align: middle;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 0;
+        @include txtnowrap;
+    }
+}
+
+.table-price-head {
+    width: 100%;
+    min-width: 1160px;
+    td {
+        white-space: break-spaces;
+        text-overflow: inherit;
+    }
+}
+
+.table-price-body {
+    width: 100%;
+    min-width: 1160px;
+    height: calc(100% - 70px) !important;
+    td {
+        .inputintable {
+            width: 100% !important;
+        }
+    }
+}
+
+.table-upc-head {
+    width: 100%;
+    td {
+        white-space: break-spaces;
+        text-overflow: inherit;
+    }
+}
+
+.table-upc-body {
+    width: 100%;
+    height: calc(100% - 24px);
+    td {
+        .inputintable {
+            width: 100% !important;
+        }
+    }
+}
+
+.break-space {
+    white-space: break-spaces;
+}
+
+.text-left {
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+
+.table-body {
+    color: var(--darkBlue);
+    font-size: 11px;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    display: block;
+    .selectcontainer {
+        height: 22px;
+        .select2-container {
+            //width: 60px !important;
+            height: 22px;
+        }
+        .select2-container--default .select2-selection--single,
+        .select2-container--default .select2-selection--multiple {
+            font-size: 12px;
+            height: 22px !important;
+            border-radius: 2px;
+        }
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-right: 30px;
+            padding-left: 5px;
+            height: 20px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 20px;
+            width: 20px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            width: 20px;
+            height: 20px;
+            background-size: 22px;
+        }
+    }
+    tbody {
+        display: flex;
+        flex-direction: column;
+    }
+    tr {
+        width: 100%;
+        display: flex;
+    }
+    td {
+        padding: 7px;
+        vertical-align: middle;
+        border: 0px;
+        transition: background-color 0.2s;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .inv-product {
+            width: 40%;
+        }
+        .inputintable {
+            width: 70%;
+            height: 22px;
+            text-align: center;
+            border-radius: 3px;
+            padding: 2px;
+        }
+        .morelesscontainer {
+            height: 22px;
+            border: 0;
+            .minus,
+            .add {
+                height: 22px;
+            }
+            input[type=text] {
+                height: 22px;
+                text-align: center;
+                border: 0;
+                background: transparent;
+                padding: 0px;
+            }
+        }
+    }
+    .clr-green {
+        background-color: rgb(142, 255, 155);
+        --bs-table-accent-bg: rgb(142, 255, 155);
+    }
+    .clr-yellow {
+        background-color: rgb(255, 204, 102);
+        --bs-table-accent-bg: rgb(255, 204, 102);
+    }
+    .clr-lightpink {
+        background-color: rgb(255, 184, 168);
+        --bs-table-accent-bg: rgb(255, 184, 168);
+    }
+    .clr-pink {
+        background-color: rgb(255, 161, 140);
+        --bs-table-accent-bg: rgb(255, 161, 140);
+    }
+    .clr {
+        width: 25px;
+        height: 15px;
+        border-radius: 3px;
+        margin: 0 auto;
+    }
+    .clr-white {
+        background-color: var(--clr-white);
+        border: 1px solid var(--borders);
+    }
+    .clr-orange {
+        background-color: var(--clr-orange);
+        border: 1px solid var(--orange);
+    }
+    .clr-brightpink {
+        background-color: var(--clr-brightpink);
+        border: 1px solid var(--brightpink);
+    }
+}
+
+.table-box-body {
+    height: calc(100% - 49px);
+}
+
+.table-box-summary {
+    background-color: var(--tablesummary);
+    font-size: 12px;
+    color: var(--darkGray);
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-top: 1px solid var(--borders);
+    td {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+}
+
+.inv-product {
+    width: 33%;
+    justify-content: flex-start !important;
+}
+
+.inv-ph,
+.inv-price,
+.inv-color,
+.box-color,
+.inv-re {
+    width: 5%;
+}
+
+.inv-qty {
+    width: 8%;
+}
+
+.box-tablecontainer {
+    height: 50%;
+}
+
+.box-product {
+    width: 25%;
+    justify-content: flex-start !important;
+}
+
+.box-farm {
+    width: 10%;
+}
+
+.box-moreless {
+    width: 8%;
+}
+
+.box-price {
+    width: 8%;
+}
+
+.box-freight,
+.box-totalbunch {
+    width: 10%;
+}
+
+.box-actions {
+    width: 8%;
+    justify-content: space-between !important;
+}
+
+.td-w-4 {
+    width: 4%;
+}
+
+// .max-w-40 {
+//     max-width: 40px;
+// }
+// .max-w-50 {
+//     max-width: 50px;
+// }
+// .max-w-60 {
+//     max-width: 60px;
+// }
+// .max-w-70 {
+//     max-width: 70px;
+// }
+// .max-w-80 {
+//     max-width: 80px;
+// }
+// .max-w-200 {
+//     max-width: 200px;
+// }
+.td-w-5 {
+    width: 5%;
+}
+
+.td-w-6 {
+    width: 6%;
+}
+
+.td-w-7 {
+    width: 7%;
+}
+
+.td-w-8 {
+    width: 8%;
+}
+
+.td-w-10 {
+    width: 10%;
+}
+
+.td-w-15 {
+    width: 15%;
+}
+
+.td-w-20 {
+    width: 20%;
+}
+
+.td-w-25 {
+    width: 25%;
+}
+
+.td-w-30 {
+    width: 30%;
+}
+
+.td-w-27 {
+    width: 27%;
+}
+
+.td-w-35 {
+    width: 35%;
+}
+
+.td-w-55 {
+    width: 55%;
+}
+
+tr.functiontoall {
+    td {
+        height: 30px;
+        white-space: inherit;
+        //background: var(--lightgray);
+        .inputintable {
+            height: 22px;
+            text-align: center;
+            border-radius: 3px;
+            padding: 2px;
+        }
+        .form-check {
+            justify-content: center;
+        }
+    }
+}
+
+.tabscroll {
+    overflow-y: scroll;
+    @include scrollbar-y($bradio: 0);
+    .sticky-head {
+        position: sticky;
+    }
+}
+
+.tabscroll-x {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    @include scrollbar-x($bradio: 0);
+    .sticky-head {
+        position: sticky;
+    }
+}
+
+// End Table Inventory //

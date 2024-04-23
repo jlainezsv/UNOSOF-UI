@@ -1,0 +1,335 @@
+@media(min-width:1801px) {
+    .show-max-1800 {
+        display: none !important;
+    }
+}
+
+@media(min-width:1351px) {
+    .show-max-1350 {
+        display: none !important;
+    }
+}
+
+@media(max-width:1800px) {
+    .show-max-xxl {
+        display: none !important;
+    }
+}
+
+@media(max-width:1550px) {
+    .btn-control-filters .no-layout2 {
+        display: none;
+    }
+    .layout-1 .nav-tabs {
+        overflow-x: overlay;
+        overflow-y: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width:1450px) {
+    .layout-3 {
+        .no-layout2 {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:1400px) {
+    .layout-2 .nav-tabs .nav-link {
+        padding: 5px 2px;
+    }
+}
+
+@media(max-width:1350px) {
+    // .show-max-xl {
+    //     display: none !important;
+    // }
+    .layout-2 .nav-tabs .nav-link {
+        width: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    // #invent-filters {
+    //     .filcont {
+    //         display: flex;
+    //         padding: 10px;
+    //         flex-wrap: wrap;
+    //     }
+    // }
+}
+
+@media(max-width:1260px) {
+    .topfunctions {
+        //flex-direction: column;
+        .funcleft {
+            // width: 100% !important;
+            // width: 30%;
+            width: 50%;
+        }
+        .funcright {
+            width: 48% !important;
+        }
+    }
+    .show-min-1260 {
+        display: none !important;
+    }
+}
+
+@media(max-width:1080px) {
+    .nav-tabs .nav-link {
+        width: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@media(min-width:993px) {
+    .panel-box {
+        .btn-control-filters {
+            display: none;
+        }
+    }
+    .bottomfunctions {
+        .link-arrow {
+            display: none !important;
+        }
+    }
+    .showtaxeslink {
+        display: none !important;
+    }
+}
+
+@media(max-width:992px) {
+    #page-wrapper {
+        width: 100%;
+    }
+    .noMobile,
+    .layouts {
+        display: none !important;
+    }
+    .tb-client-info {
+        flex-wrap: wrap;
+    }
+    #po-topbar {
+        height: auto;
+        padding: 4px 15px;
+        .logo {
+            width: 30px;
+            height: auto;
+        }
+        .tb-btn {
+            width: 90px;
+        }
+    }
+    .layout-3 {
+        flex-direction: column;
+        justify-content: flex-start;
+        .minibox-container {
+            display: none !important;
+        }
+        .select2-container {
+            height: 25px;
+        }
+        .select2-container--default .select2-selection--single,
+        .select2-container--default .select2-selection--multiple {
+            height: 25px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            height: 23px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow,
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            height: 23px;
+            width: 23px;
+        }
+        .panel-invent {
+            height: calc(50% - 113px);
+            width: 100%;
+            margin-bottom: 10px;
+            transition: height 0.2s;
+            .tab-content {
+                overflow-y: auto;
+                display: inherit;
+            }
+        }
+        .box-tablecontainer {
+            height: calc(100% - 82px);
+        }
+        .mini-packages-container {
+            padding-left: 2px !important;
+            width: 80% !important;
+            .ico-package {
+                display: none !important;
+            }
+            .packages-container {
+                width: calc(100% - 60px) !important;
+            }
+        }
+        .panel-box {
+            height: calc(54% - 0px);
+            width: 100%;
+            transition: height 0.2s;
+            .tab-content {
+                overflow-y: auto;
+                display: inherit;
+            }
+        }
+        .table-body {
+            height: calc(100% - 33px);
+        }
+        .table-price-body {
+            height: 80px !important;
+        }
+        .nav-link.active {
+            width: 50px;
+        }
+        .icon-filter {
+            margin-right: 0px;
+        }
+        .topfunctions {
+            flex-direction: column;
+            min-height: auto !important;
+            max-height: 120px;
+            .funcleft {
+                width: 100%;
+                padding: 0px;
+            }
+            .funcright {
+                width: 100% !important;
+                input {
+                    height: 25px;
+                }
+            }
+        }
+        .bottomfunctions {
+            min-height: 82px;
+            height: auto;
+            padding: 10px;
+            .funcleft {
+                display: initial;
+                height: auto;
+                padding: 0px 0 5px;
+                .link-arrow {
+                    font-size: 14px;
+                    height: 25px;
+                    align-items: center;
+                }
+                #box-messages {
+                    textarea {
+                        height: 40px;
+                        width: 100%;
+                    }
+                }
+                .textareacont {
+                    margin-bottom: 10px;
+                    height: auto;
+                    #customer-label {
+                        margin-bottom: 10px;
+                    }
+                    #message-toharvest {
+                        float: inherit;
+                    }
+                }
+            }
+            .funcright {
+                padding: 0px;
+                .btn-cancel {
+                    width: 49%;
+                    height: 32px;
+                }
+                .btn-save {
+                    width: 49%;
+                    height: 32px;
+                }
+            }
+        }
+        .box-tablecontainer {
+            border-top-right-radius: 8px;
+            position: relative;
+        }
+        .this-expand {
+            // position: absolute;
+            // width: calc(70% - 10px);
+            height: calc(100% - 136px);
+            transition: height 0.2s;
+        }
+        .this-collapse {
+            //  position: absolute;
+            //width: calc(70% - 10px);
+            //height: calc(10% - 35px);
+            height: 47px;
+            transition: height 0.2s;
+            #invent-filters {
+                display: none;
+            }
+        }
+        .expanded-packages {
+            .navcontainer {
+                height: 30px;
+            }
+            .tab-content {
+                flex-direction: column;
+                height: calc(100% - 30px);
+                overflow-y: auto;
+                .packages-container {
+                    width: 100%;
+                    .packagebox {
+                        width: 100%;
+                    }
+                }
+                .po-summary {
+                    max-width: initial;
+                    width: 100%;
+                    .top-actions {
+                        padding: 10px 0;
+                    }
+                    .showtaxeslink {
+                        font-size: 14px;
+                    }
+                    .totalprice {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h5 {
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        /////////// Nav Pricing ///////////
+        #nav-pricing {
+            .box-tablecontainer {
+                height: calc(100% - 120px) !important;
+            }
+        }
+        /////////// Nav fees /////////// 
+        #nav-fees {
+            .box-tablecontainer {
+                height: 60% !important;
+            }
+            .links {
+                width: 100%;
+                flex-wrap: wrap;
+                display: flex;
+                a {
+                    font-size: 12px;
+                    width: 48%;
+                    display: flex;
+                    padding: 5px 0;
+                }
+            }
+        }
+        /////////// Nav Services ///////////
+        #nav-services {
+            .box-tablecontainer {
+                height: 60% !important;
+            }
+        }
+    }
+}
